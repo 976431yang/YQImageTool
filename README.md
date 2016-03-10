@@ -3,11 +3,16 @@
 
 简易图片处理工具：圆角、缩略图、水印、裁剪、根据遮罩图形状裁剪、阴影、旋转、渲染UIView成图片
 
+
+
+
+
 //--------------------------------------------------圆角
 
 //预先生成圆角图片，直接渲染到UIImageView中去，相比直接在UIImageView.layer中去设置圆角，可以缩短渲染时间。
 
 //在原图的四周生成圆角，得到带圆角的图片
+
 +(UIImage *)getCornerImageAtOriginalImageCornerWithImage:(UIImage *)image
                                            andCornerWith:(CGFloat)width
                                       andBackGroundColor:(UIColor *)backgroundcolor;
