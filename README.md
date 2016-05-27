@@ -16,16 +16,16 @@
         +(UIImage *)getCornerImageAtOriginalImageCornerWithImage:(UIImage *)image
                                                    andCornerWith:(CGFloat)width
                                               andBackGroundColor:(UIColor *)backgroundcolor;
-
+```Objective-C
 
 
         //根据Size生成圆角图片，图片会拉伸-变形
-
+```Objective-C
         +(UIImage *)getCornerImageFitSize:(CGSize)Size
                                WithImage:(UIImage *)image
                            andCornerWith:(CGFloat)width
                       andBackGroundColor:(UIColor *)backgroundcolor;
-
+```Objective-C
 
         //根据Size生成圆角图片，图片会自适应填充，伸展范围以外的部分会被裁剪掉-不会变形
 
