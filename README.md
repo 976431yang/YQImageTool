@@ -14,8 +14,13 @@
         
 ```Objective-C
         +(UIImage *)getCornerImageAtOriginalImageCornerWithImage:(UIImage *)image
+```
+```Objective-C
                                                    andCornerWith:(CGFloat)width
+```
+```Objective-C
                                               andBackGroundColor:(UIColor *)backgroundcolor;
+```
 ```Objective-C
 
 
