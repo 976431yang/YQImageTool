@@ -6,28 +6,27 @@
 
 直接拖到工程中使用
 
-
+```Objective-C
         //--------------------------------------------------圆角
         
         //预先生成圆角图片，直接渲染到UIImageView中去，相比直接在UIImageView.layer中去设置圆角，可以缩短渲染时间。
         //在原图的四周生成圆角，得到带圆角的图片
         
-```Objective-C
         +(UIImage *)getCornerImageAtOriginalImageCornerWithImage:(UIImage *)image
                                                    andCornerWith:(CGFloat)width
                                               andBackGroundColor:(UIColor *)backgroundcolor;
 ```
 
 
-
-        //根据Size生成圆角图片，图片会拉伸-变形
 ```Objective-C
+        //根据Size生成圆角图片，图片会拉伸-变形
+
         +(UIImage *)getCornerImageFitSize:(CGSize)Size
                                WithImage:(UIImage *)image
                            andCornerWith:(CGFloat)width
                       andBackGroundColor:(UIColor *)backgroundcolor;
+```
 ```Objective-C
-
         //根据Size生成圆角图片，图片会自适应填充，伸展范围以外的部分会被裁剪掉-不会变形
 
         +(UIImage *)getCornerImageFillSize:(CGSize)Size
@@ -35,7 +34,8 @@
                             andCornerWith:(CGFloat)width
                        andBackGroundColor:(UIColor *)backgroundcolor;
                        
-        
+```
+```Objective-C
         //--------------------------------------------------缩略图
         //若Scale为YES，则原图会根据Size进行拉伸-会变形
         //若Scale为NO，则原图会根据Size进行填充-不会变形
@@ -43,7 +43,9 @@
         +(UIImage *)getThumbImageWithImage:(UIImage *)image
                                    andSize:(CGSize)Size
                                      Scale:(BOOL)Scale;
-        
+                                     
+```
+```Objective-C
         //--------------------------------------------------水印
         //生成带水印的图片
         //backImage:背景图片，waterImage：水印图片，
@@ -56,6 +58,8 @@
                                                 alpha:(CGFloat)alpha
                                            waterScale:(BOOL)waterScale;
         
+```
+```Objective-C
         //--------------------------------------------------裁剪
         //参数：原图、坐标、大小、背景色
         //若裁剪范围超出原图尺寸，则会用背景色填充缺失部位
@@ -65,6 +69,8 @@
                              withSize:(CGSize)Size
                       backgroundColor:(UIColor *)backColor;
         
+```
+```Objective-C
         //--------------------------------------------------根据遮罩图形状裁剪
         //根据遮罩图片的形状，裁剪原图，并生成新的图片
         //遮罩图片说明：遮罩图片最好是要显示的区域为纯黑色，不显示的区域为透明色。
@@ -74,6 +80,8 @@
         +(UIImage *)creatImageWithMaskImage:(UIImage *)MaskImage
                                andBackimage:(UIImage *)Backimage;
         
+```
+```Objective-C
         //--------------------------------------------------生成阴影
         //ShadowOffset:横纵方向的偏移
         //BlurWidth   :边缘模糊宽度
@@ -85,13 +93,17 @@
                                          andBlurWidth:(CGFloat)blurWidth
                                              andAlpha:(CGFloat)Alpha
                                              andColor:(UIColor *)Color;
-        
+
+```
+```Objective-C
         //--------------------------------------------------旋转
         //Angle:角度（0~360）
         
         +(UIImage  *)GetRotationImageWithImage:(UIImage *)image
                                          Angle:(CGFloat)Angle;
         
+```
+```Objective-C
         //--------------------------------------------------UIView转图片，提前渲染
         //把UIView及它的子类控件 转换为UIImage
         //注：由于ios的编程像素和实际显示像素不同，在X2和X3的retina屏幕设备上，使用此方法生成的图片大小将会被还原成1倍像素，
