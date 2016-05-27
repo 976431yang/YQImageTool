@@ -14,14 +14,10 @@
         
 ```Objective-C
         +(UIImage *)getCornerImageAtOriginalImageCornerWithImage:(UIImage *)image
-```
-```Objective-C
                                                    andCornerWith:(CGFloat)width
-```
-```Objective-C
                                               andBackGroundColor:(UIColor *)backgroundcolor;
 ```
-```Objective-C
+
 
 
         //根据Size生成圆角图片，图片会拉伸-变形
