@@ -76,6 +76,7 @@
 - 遮罩图片：遮罩图片最好是要显示的区域为纯黑色，不显示的区域为透明色。
 - 原图与遮罩图片宽高最好都是1：1。若比例不同，则会居中。
 - 若因比例问题达不到效果，可用下面的UIview转UIImage的方法，先制作1：1的UIview，然后转成UIImage使用此功能
+
 ```Objective-C
 +(UIImage *)creatImageWithMaskImage:(UIImage *)MaskImage
                        andBackimage:(UIImage *)Backimage;
