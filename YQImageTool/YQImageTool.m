@@ -253,14 +253,14 @@
     
     if (Backimage.size.height>Backimage.size.width) {
         rect     = CGRectMake(0,
-                              (Backimage.size.height-Backimage.size.width)/2,
-                              Backimage.size.width,
-                              Backimage.size.width);
+                              (Backimage.size.height-Backimage.size.width),
+                              Backimage.size.width*2,
+                              Backimage.size.width*2);
     }else{
-        rect     = CGRectMake((Backimage.size.width-Backimage.size.height)/2,
+        rect     = CGRectMake((Backimage.size.width-Backimage.size.height),
                               0,
-                              Backimage.size.height,
-                              Backimage.size.height);
+                              Backimage.size.height*2,
+                              Backimage.size.height*2);
     }
     
     
@@ -420,6 +420,12 @@
     
     CGFloat width  = (image.size.width+offset.width+blurWidth*4)*Scale;
     CGFloat height = (image.size.height+offset.height+blurWidth*4)*Scale;
+    if(offset.width<0){
+        width  = (image.size.width-offset.width+blurWidth*4)*Scale;
+    }
+    if(offset.height<0){
+        height = (image.size.height-offset.height+blurWidth*4)*Scale;
+    }
     
     UIView *RootBackView = [[UIView alloc]initWithFrame:CGRectMake(0,0,
                                                                    width,
@@ -430,6 +436,18 @@
                                                                           blurWidth*2*Scale,
                                                                           image.size.width*Scale,
                                                                           image.size.height*Scale)];
+    if(offset.width<0){
+        ImageView.frame = CGRectMake((blurWidth*2-offset.width)*Scale,
+                                     ImageView.frame.origin.y,
+                                     ImageView.frame.size.width,
+                                     ImageView.frame.size.height);
+    }
+    if(offset.height<0){
+        ImageView.frame = CGRectMake(ImageView.frame.origin.x,
+                                     (blurWidth*2-offset.height)*Scale,
+                                     ImageView.frame.size.width,
+                                     ImageView.frame.size.height);
+    }
     ImageView.backgroundColor = [UIColor clearColor];
     ImageView.layer.shadowOffset = CGSizeMake(offset.width*Scale, offset.height*Scale);
     ImageView.layer.shadowRadius = blurWidth*Scale;
