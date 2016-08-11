@@ -7,6 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "YQImageCompressTool.h"
+
 @interface YQImageTool : NSObject
 
 #pragma mark --------圆角

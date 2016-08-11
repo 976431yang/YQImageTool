@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9511837F1D5C5DC9007522D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9511837E1D5C5DC9007522D0 /* main.m */; };
+		951183821D5C5DC9007522D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 951183811D5C5DC9007522D0 /* AppDelegate.m */; };
+		951183851D5C5DC9007522D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 951183841D5C5DC9007522D0 /* ViewController.m */; };
+		951183881D5C5DC9007522D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951183861D5C5DC9007522D0 /* Main.storyboard */; };
+		9511838A1D5C5DC9007522D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951183891D5C5DC9007522D0 /* Assets.xcassets */; };
+		9511838D1D5C5DC9007522D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9511838B1D5C5DC9007522D0 /* LaunchScreen.storyboard */; };
+		951183981D5C5DC9007522D0 /* YQImageToolDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 951183971D5C5DC9007522D0 /* YQImageToolDemoTests.m */; };
+		951183A31D5C5DC9007522D0 /* YQImageToolDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 951183A21D5C5DC9007522D0 /* YQImageToolDemoUITests.m */; };
+		9552F65E1D5C5E050033493D /* YQImageCompressTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F65B1D5C5E050033493D /* YQImageCompressTool.m */; };
+		9552F65F1D5C5E050033493D /* YQImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F65D1D5C5E050033493D /* YQImageTool.m */; };
+		9552F6651D5C5E840033493D /* OnlyCompressDataDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F6601D5C5E840033493D /* OnlyCompressDataDemo.m */; };
+		9552F6661D5C5E840033493D /* OnlyCompressImageDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F6621D5C5E840033493D /* OnlyCompressImageDemo.m */; };
+		9552F6671D5C5E840033493D /* OnlyResizeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F6641D5C5E840033493D /* OnlyResizeDemo.m */; };
+		9552F66E1D5C5E9C0033493D /* DemoShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F6691D5C5E9C0033493D /* DemoShowViewController.m */; };
+		9552F66F1D5C5E9C0033493D /* FrontDataDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F66B1D5C5E9C0033493D /* FrontDataDemo.m */; };
+		9552F6701D5C5E9C0033493D /* FrontImageDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F66D1D5C5E9C0033493D /* FrontImageDemo.m */; };
+		9552F6751D5C5EA40033493D /* BackDataDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F6721D5C5EA40033493D /* BackDataDemo.m */; };
+		9552F6761D5C5EA40033493D /* BackImageDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F6741D5C5EA40033493D /* BackImageDemo.m */; };
+		9552F67B1D5C5F340033493D /* CompressorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F67A1D5C5F340033493D /* CompressorViewController.m */; };
+		9552F67E1D5C63490033493D /* IMageToolDemoShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F67D1D5C63490033493D /* IMageToolDemoShowViewController.m */; };
+		9552F6811D5C63A50033493D /* ImageToolDemoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F6801D5C63A50033493D /* ImageToolDemoItem.m */; };
+		9552F6831D5C65BE0033493D /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 9552F6821D5C65BE0033493D /* test.png */; };
+		9552F6871D5C66990033493D /* test1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9552F6861D5C66990033493D /* test1.jpg */; };
+		9552F6891D5C67270033493D /* mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 9552F6881D5C67270033493D /* mask.png */; };
+		9552F68C1D5C67910033493D /* CornerIMGVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F68B1D5C67910033493D /* CornerIMGVC1.m */; };
+		9552F6951D5C6D700033493D /* ThumVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F6941D5C6D700033493D /* ThumVC.m */; };
+		9552F6981D5C6EC00033493D /* WaterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F6971D5C6EC00033493D /* WaterVC.m */; };
+		9552F69B1D5C6FD70033493D /* MaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F69A1D5C6FD70033493D /* MaskVC.m */; };
+		9552F69E1D5C71FF0033493D /* CutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F69D1D5C71FF0033493D /* CutVC.m */; };
+		9552F6A11D5C736D0033493D /* ShadowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F6A01D5C736D0033493D /* ShadowVC.m */; };
+		9552F6A41D5C772F0033493D /* RotationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F6A31D5C772F0033493D /* RotationVC.m */; };
+		9552F6A71D5C77F90033493D /* ViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F6A61D5C77F90033493D /* ViewVC.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		951183941D5C5DC9007522D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 951183721D5C5DC8007522D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 951183791D5C5DC8007522D0;
+			remoteInfo = YQImageToolDemo;
+		};
+		9511839F1D5C5DC9007522D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 951183721D5C5DC8007522D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 951183791D5C5DC8007522D0;
+			remoteInfo = YQImageToolDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9511837A1D5C5DC8007522D0 /* YQImageToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YQImageToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9511837E1D5C5DC9007522D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		951183801D5C5DC9007522D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		951183811D5C5DC9007522D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		951183831D5C5DC9007522D0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		951183841D5C5DC9007522D0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		951183871D5C5DC9007522D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		951183891D5C5DC9007522D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9511838C1D5C5DC9007522D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9511838E1D5C5DC9007522D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		951183931D5C5DC9007522D0 /* YQImageToolDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YQImageToolDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		951183971D5C5DC9007522D0 /* YQImageToolDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQImageToolDemoTests.m; sourceTree = "<group>"; };
+		951183991D5C5DC9007522D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9511839E1D5C5DC9007522D0 /* YQImageToolDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YQImageToolDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		951183A21D5C5DC9007522D0 /* YQImageToolDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQImageToolDemoUITests.m; sourceTree = "<group>"; };
+		951183A41D5C5DC9007522D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9552F65A1D5C5E050033493D /* YQImageCompressTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQImageCompressTool.h; sourceTree = "<group>"; };
+		9552F65B1D5C5E050033493D /* YQImageCompressTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQImageCompressTool.m; sourceTree = "<group>"; };
+		9552F65C1D5C5E050033493D /* YQImageTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQImageTool.h; sourceTree = "<group>"; };
+		9552F65D1D5C5E050033493D /* YQImageTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQImageTool.m; sourceTree = "<group>"; };
+		9552F6601D5C5E840033493D /* OnlyCompressDataDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlyCompressDataDemo.m; sourceTree = "<group>"; };
+		9552F6611D5C5E840033493D /* OnlyCompressImageDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlyCompressImageDemo.h; sourceTree = "<group>"; };
+		9552F6621D5C5E840033493D /* OnlyCompressImageDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlyCompressImageDemo.m; sourceTree = "<group>"; };
+		9552F6631D5C5E840033493D /* OnlyResizeDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlyResizeDemo.h; sourceTree = "<group>"; };
+		9552F6641D5C5E840033493D /* OnlyResizeDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlyResizeDemo.m; sourceTree = "<group>"; };
+		9552F6681D5C5E9C0033493D /* DemoShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoShowViewController.h; sourceTree = "<group>"; };
+		9552F6691D5C5E9C0033493D /* DemoShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoShowViewController.m; sourceTree = "<group>"; };
+		9552F66A1D5C5E9C0033493D /* FrontDataDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrontDataDemo.h; sourceTree = "<group>"; };
+		9552F66B1D5C5E9C0033493D /* FrontDataDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrontDataDemo.m; sourceTree = "<group>"; };
+		9552F66C1D5C5E9C0033493D /* FrontImageDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrontImageDemo.h; sourceTree = "<group>"; };
+		9552F66D1D5C5E9C0033493D /* FrontImageDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrontImageDemo.m; sourceTree = "<group>"; };
+		9552F6711D5C5EA40033493D /* BackDataDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackDataDemo.h; sourceTree = "<group>"; };
+		9552F6721D5C5EA40033493D /* BackDataDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackDataDemo.m; sourceTree = "<group>"; };
+		9552F6731D5C5EA40033493D /* BackImageDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackImageDemo.h; sourceTree = "<group>"; };
+		9552F6741D5C5EA40033493D /* BackImageDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackImageDemo.m; sourceTree = "<group>"; };
+		9552F6771D5C5EBD0033493D /* OnlyCompressDataDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnlyCompressDataDemo.h; sourceTree = "<group>"; };
+		9552F6791D5C5F340033493D /* CompressorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompressorViewController.h; sourceTree = "<group>"; };
+		9552F67A1D5C5F340033493D /* CompressorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompressorViewController.m; sourceTree = "<group>"; };
+		9552F67C1D5C63490033493D /* IMageToolDemoShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMageToolDemoShowViewController.h; sourceTree = "<group>"; };
+		9552F67D1D5C63490033493D /* IMageToolDemoShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMageToolDemoShowViewController.m; sourceTree = "<group>"; };
+		9552F67F1D5C63A50033493D /* ImageToolDemoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageToolDemoItem.h; sourceTree = "<group>"; };
+		9552F6801D5C63A50033493D /* ImageToolDemoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageToolDemoItem.m; sourceTree = "<group>"; };
+		9552F6821D5C65BE0033493D /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		9552F6861D5C66990033493D /* test1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1.jpg; sourceTree = "<group>"; };
+		9552F6881D5C67270033493D /* mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask.png; sourceTree = "<group>"; };
+		9552F68A1D5C67910033493D /* CornerIMGVC1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CornerIMGVC1.h; sourceTree = "<group>"; };
+		9552F68B1D5C67910033493D /* CornerIMGVC1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CornerIMGVC1.m; sourceTree = "<group>"; };
+		9552F6931D5C6D700033493D /* ThumVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumVC.h; sourceTree = "<group>"; };
+		9552F6941D5C6D700033493D /* ThumVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumVC.m; sourceTree = "<group>"; };
+		9552F6961D5C6EC00033493D /* WaterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterVC.h; sourceTree = "<group>"; };
+		9552F6971D5C6EC00033493D /* WaterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterVC.m; sourceTree = "<group>"; };
+		9552F6991D5C6FD70033493D /* MaskVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskVC.h; sourceTree = "<group>"; };
+		9552F69A1D5C6FD70033493D /* MaskVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskVC.m; sourceTree = "<group>"; };
+		9552F69C1D5C71FF0033493D /* CutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutVC.h; sourceTree = "<group>"; };
+		9552F69D1D5C71FF0033493D /* CutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutVC.m; sourceTree = "<group>"; };
+		9552F69F1D5C736D0033493D /* ShadowVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowVC.h; sourceTree = "<group>"; };
+		9552F6A01D5C736D0033493D /* ShadowVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowVC.m; sourceTree = "<group>"; };
+		9552F6A21D5C772F0033493D /* RotationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationVC.h; sourceTree = "<group>"; };
+		9552F6A31D5C772F0033493D /* RotationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationVC.m; sourceTree = "<group>"; };
+		9552F6A51D5C77F90033493D /* ViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewVC.h; sourceTree = "<group>"; };
+		9552F6A61D5C77F90033493D /* ViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewVC.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		951183771D5C5DC8007522D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		951183901D5C5DC9007522D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9511839B1D5C5DC9007522D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		951183711D5C5DC8007522D0 = {
+			isa = PBXGroup;
+			children = (
+				9552F6581D5C5E050033493D /* YQImageTool */,
+				9511837C1D5C5DC8007522D0 /* YQImageToolDemo */,
+				951183961D5C5DC9007522D0 /* YQImageToolDemoTests */,
+				951183A11D5C5DC9007522D0 /* YQImageToolDemoUITests */,
+				9511837B1D5C5DC8007522D0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9511837B1D5C5DC8007522D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9511837A1D5C5DC8007522D0 /* YQImageToolDemo.app */,
+				951183931D5C5DC9007522D0 /* YQImageToolDemoTests.xctest */,
+				9511839E1D5C5DC9007522D0 /* YQImageToolDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9511837C1D5C5DC8007522D0 /* YQImageToolDemo */ = {
+			isa = PBXGroup;
+			children = (
+				951183801D5C5DC9007522D0 /* AppDelegate.h */,
+				951183811D5C5DC9007522D0 /* AppDelegate.m */,
+				951183831D5C5DC9007522D0 /* ViewController.h */,
+				951183841D5C5DC9007522D0 /* ViewController.m */,
+				9552F67C1D5C63490033493D /* IMageToolDemoShowViewController.h */,
+				9552F67D1D5C63490033493D /* IMageToolDemoShowViewController.m */,
+				9552F67F1D5C63A50033493D /* ImageToolDemoItem.h */,
+				9552F6801D5C63A50033493D /* ImageToolDemoItem.m */,
+				9552F68A1D5C67910033493D /* CornerIMGVC1.h */,
+				9552F68B1D5C67910033493D /* CornerIMGVC1.m */,
+				9552F6931D5C6D700033493D /* ThumVC.h */,
+				9552F6941D5C6D700033493D /* ThumVC.m */,
+				9552F6961D5C6EC00033493D /* WaterVC.h */,
+				9552F6971D5C6EC00033493D /* WaterVC.m */,
+				9552F69C1D5C71FF0033493D /* CutVC.h */,
+				9552F69D1D5C71FF0033493D /* CutVC.m */,
+				9552F6991D5C6FD70033493D /* MaskVC.h */,
+				9552F69A1D5C6FD70033493D /* MaskVC.m */,
+				9552F69F1D5C736D0033493D /* ShadowVC.h */,
+				9552F6A01D5C736D0033493D /* ShadowVC.m */,
+				9552F6A21D5C772F0033493D /* RotationVC.h */,
+				9552F6A31D5C772F0033493D /* RotationVC.m */,
+				9552F6A51D5C77F90033493D /* ViewVC.h */,
+				9552F6A61D5C77F90033493D /* ViewVC.m */,
+				951183861D5C5DC9007522D0 /* Main.storyboard */,
+				951183891D5C5DC9007522D0 /* Assets.xcassets */,
+				9511838B1D5C5DC9007522D0 /* LaunchScreen.storyboard */,
+				9511838E1D5C5DC9007522D0 /* Info.plist */,
+				9552F6781D5C5EC40033493D /* YQImageCompressorVC */,
+				9511837D1D5C5DC9007522D0 /* Supporting Files */,
+			);
+			path = YQImageToolDemo;
+			sourceTree = "<group>";
+		};
+		9511837D1D5C5DC9007522D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9552F6881D5C67270033493D /* mask.png */,
+				9552F6821D5C65BE0033493D /* test.png */,
+				9552F6861D5C66990033493D /* test1.jpg */,
+				9511837E1D5C5DC9007522D0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		951183961D5C5DC9007522D0 /* YQImageToolDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				951183971D5C5DC9007522D0 /* YQImageToolDemoTests.m */,
+				951183991D5C5DC9007522D0 /* Info.plist */,
+			);
+			path = YQImageToolDemoTests;
+			sourceTree = "<group>";
+		};
+		951183A11D5C5DC9007522D0 /* YQImageToolDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				951183A21D5C5DC9007522D0 /* YQImageToolDemoUITests.m */,
+				951183A41D5C5DC9007522D0 /* Info.plist */,
+			);
+			path = YQImageToolDemoUITests;
+			sourceTree = "<group>";
+		};
+		9552F6581D5C5E050033493D /* YQImageTool */ = {
+			isa = PBXGroup;
+			children = (
+				9552F6591D5C5E050033493D /* YQImageCompressor */,
+				9552F65C1D5C5E050033493D /* YQImageTool.h */,
+				9552F65D1D5C5E050033493D /* YQImageTool.m */,
+			);
+			name = YQImageTool;
+			path = YQImageToolDemo/YQImageTool;
+			sourceTree = "<group>";
+		};
+		9552F6591D5C5E050033493D /* YQImageCompressor */ = {
+			isa = PBXGroup;
+			children = (
+				9552F65A1D5C5E050033493D /* YQImageCompressTool.h */,
+				9552F65B1D5C5E050033493D /* YQImageCompressTool.m */,
+			);
+			path = YQImageCompressor;
+			sourceTree = "<group>";
+		};
+		9552F6781D5C5EC40033493D /* YQImageCompressorVC */ = {
+			isa = PBXGroup;
+			children = (
+				9552F6791D5C5F340033493D /* CompressorViewController.h */,
+				9552F67A1D5C5F340033493D /* CompressorViewController.m */,
+				9552F66A1D5C5E9C0033493D /* FrontDataDemo.h */,
+				9552F66B1D5C5E9C0033493D /* FrontDataDemo.m */,
+				9552F66C1D5C5E9C0033493D /* FrontImageDemo.h */,
+				9552F66D1D5C5E9C0033493D /* FrontImageDemo.m */,
+				9552F6711D5C5EA40033493D /* BackDataDemo.h */,
+				9552F6721D5C5EA40033493D /* BackDataDemo.m */,
+				9552F6731D5C5EA40033493D /* BackImageDemo.h */,
+				9552F6741D5C5EA40033493D /* BackImageDemo.m */,
+				9552F6771D5C5EBD0033493D /* OnlyCompressDataDemo.h */,
+				9552F6601D5C5E840033493D /* OnlyCompressDataDemo.m */,
+				9552F6611D5C5E840033493D /* OnlyCompressImageDemo.h */,
+				9552F6621D5C5E840033493D /* OnlyCompressImageDemo.m */,
+				9552F6631D5C5E840033493D /* OnlyResizeDemo.h */,
+				9552F6641D5C5E840033493D /* OnlyResizeDemo.m */,
+				9552F6681D5C5E9C0033493D /* DemoShowViewController.h */,
+				9552F6691D5C5E9C0033493D /* DemoShowViewController.m */,
+			);
+			name = YQImageCompressorVC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		951183791D5C5DC8007522D0 /* YQImageToolDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 951183A71D5C5DC9007522D0 /* Build configuration list for PBXNativeTarget "YQImageToolDemo" */;
+			buildPhases = (
+				951183761D5C5DC8007522D0 /* Sources */,
+				951183771D5C5DC8007522D0 /* Frameworks */,
+				951183781D5C5DC8007522D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YQImageToolDemo;
+			productName = YQImageToolDemo;
+			productReference = 9511837A1D5C5DC8007522D0 /* YQImageToolDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		951183921D5C5DC9007522D0 /* YQImageToolDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 951183AA1D5C5DC9007522D0 /* Build configuration list for PBXNativeTarget "YQImageToolDemoTests" */;
+			buildPhases = (
+				9511838F1D5C5DC9007522D0 /* Sources */,
+				951183901D5C5DC9007522D0 /* Frameworks */,
+				951183911D5C5DC9007522D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				951183951D5C5DC9007522D0 /* PBXTargetDependency */,
+			);
+			name = YQImageToolDemoTests;
+			productName = YQImageToolDemoTests;
+			productReference = 951183931D5C5DC9007522D0 /* YQImageToolDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9511839D1D5C5DC9007522D0 /* YQImageToolDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 951183AD1D5C5DC9007522D0 /* Build configuration list for PBXNativeTarget "YQImageToolDemoUITests" */;
+			buildPhases = (
+				9511839A1D5C5DC9007522D0 /* Sources */,
+				9511839B1D5C5DC9007522D0 /* Frameworks */,
+				9511839C1D5C5DC9007522D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				951183A01D5C5DC9007522D0 /* PBXTargetDependency */,
+			);
+			name = YQImageToolDemoUITests;
+			productName = YQImageToolDemoUITests;
+			productReference = 9511839E1D5C5DC9007522D0 /* YQImageToolDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		951183721D5C5DC8007522D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = ProblenChild;
+				TargetAttributes = {
+					951183791D5C5DC8007522D0 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					951183921D5C5DC9007522D0 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 951183791D5C5DC8007522D0;
+					};
+					9511839D1D5C5DC9007522D0 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 951183791D5C5DC8007522D0;
+					};
+				};
+			};
+			buildConfigurationList = 951183751D5C5DC8007522D0 /* Build configuration list for PBXProject "YQImageToolDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 951183711D5C5DC8007522D0;
+			productRefGroup = 9511837B1D5C5DC8007522D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				951183791D5C5DC8007522D0 /* YQImageToolDemo */,
+				951183921D5C5DC9007522D0 /* YQImageToolDemoTests */,
+				9511839D1D5C5DC9007522D0 /* YQImageToolDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		951183781D5C5DC8007522D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9511838D1D5C5DC9007522D0 /* LaunchScreen.storyboard in Resources */,
+				9511838A1D5C5DC9007522D0 /* Assets.xcassets in Resources */,
+				951183881D5C5DC9007522D0 /* Main.storyboard in Resources */,
+				9552F6871D5C66990033493D /* test1.jpg in Resources */,
+				9552F6831D5C65BE0033493D /* test.png in Resources */,
+				9552F6891D5C67270033493D /* mask.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		951183911D5C5DC9007522D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9511839C1D5C5DC9007522D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		951183761D5C5DC8007522D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9552F6A11D5C736D0033493D /* ShadowVC.m in Sources */,
+				9552F68C1D5C67910033493D /* CornerIMGVC1.m in Sources */,
+				9552F6701D5C5E9C0033493D /* FrontImageDemo.m in Sources */,
+				9552F6981D5C6EC00033493D /* WaterVC.m in Sources */,
+				951183851D5C5DC9007522D0 /* ViewController.m in Sources */,
+				9552F66E1D5C5E9C0033493D /* DemoShowViewController.m in Sources */,
+				9552F6811D5C63A50033493D /* ImageToolDemoItem.m in Sources */,
+				9552F69E1D5C71FF0033493D /* CutVC.m in Sources */,
+				9552F6761D5C5EA40033493D /* BackImageDemo.m in Sources */,
+				951183821D5C5DC9007522D0 /* AppDelegate.m in Sources */,
+				9552F69B1D5C6FD70033493D /* MaskVC.m in Sources */,
+				9552F6651D5C5E840033493D /* OnlyCompressDataDemo.m in Sources */,
+				9552F6A41D5C772F0033493D /* RotationVC.m in Sources */,
+				9552F6661D5C5E840033493D /* OnlyCompressImageDemo.m in Sources */,
+				9552F67B1D5C5F340033493D /* CompressorViewController.m in Sources */,
+				9552F6A71D5C77F90033493D /* ViewVC.m in Sources */,
+				9552F6671D5C5E840033493D /* OnlyResizeDemo.m in Sources */,
+				9552F66F1D5C5E9C0033493D /* FrontDataDemo.m in Sources */,
+				9552F6951D5C6D700033493D /* ThumVC.m in Sources */,
+				9552F67E1D5C63490033493D /* IMageToolDemoShowViewController.m in Sources */,
+				9511837F1D5C5DC9007522D0 /* main.m in Sources */,
+				9552F6751D5C5EA40033493D /* BackDataDemo.m in Sources */,
+				9552F65E1D5C5E050033493D /* YQImageCompressTool.m in Sources */,
+				9552F65F1D5C5E050033493D /* YQImageTool.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9511838F1D5C5DC9007522D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				951183981D5C5DC9007522D0 /* YQImageToolDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9511839A1D5C5DC9007522D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				951183A31D5C5DC9007522D0 /* YQImageToolDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		951183951D5C5DC9007522D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 951183791D5C5DC8007522D0 /* YQImageToolDemo */;
+			targetProxy = 951183941D5C5DC9007522D0 /* PBXContainerItemProxy */;
+		};
+		951183A01D5C5DC9007522D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 951183791D5C5DC8007522D0 /* YQImageToolDemo */;
+			targetProxy = 9511839F1D5C5DC9007522D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		951183861D5C5DC9007522D0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				951183871D5C5DC9007522D0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9511838B1D5C5DC9007522D0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9511838C1D5C5DC9007522D0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		951183A51D5C5DC9007522D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		951183A61D5C5DC9007522D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		951183A81D5C5DC9007522D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YQImageToolDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.problenchild.YQImageToolDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		951183A91D5C5DC9007522D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YQImageToolDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.problenchild.YQImageToolDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		951183AB1D5C5DC9007522D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YQImageToolDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.problenchild.YQImageToolDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YQImageToolDemo.app/YQImageToolDemo";
+			};
+			name = Debug;
+		};
+		951183AC1D5C5DC9007522D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YQImageToolDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.problenchild.YQImageToolDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YQImageToolDemo.app/YQImageToolDemo";
+			};
+			name = Release;
+		};
+		951183AE1D5C5DC9007522D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YQImageToolDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.problenchild.YQImageToolDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YQImageToolDemo;
+			};
+			name = Debug;
+		};
+		951183AF1D5C5DC9007522D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YQImageToolDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.problenchild.YQImageToolDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YQImageToolDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		951183751D5C5DC8007522D0 /* Build configuration list for PBXProject "YQImageToolDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				951183A51D5C5DC9007522D0 /* Debug */,
+				951183A61D5C5DC9007522D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		951183A71D5C5DC9007522D0 /* Build configuration list for PBXNativeTarget "YQImageToolDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				951183A81D5C5DC9007522D0 /* Debug */,
+				951183A91D5C5DC9007522D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		951183AA1D5C5DC9007522D0 /* Build configuration list for PBXNativeTarget "YQImageToolDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				951183AB1D5C5DC9007522D0 /* Debug */,
+				951183AC1D5C5DC9007522D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		951183AD1D5C5DC9007522D0 /* Build configuration list for PBXNativeTarget "YQImageToolDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				951183AE1D5C5DC9007522D0 /* Debug */,
+				951183AF1D5C5DC9007522D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 951183721D5C5DC8007522D0 /* Project object */;
+}
