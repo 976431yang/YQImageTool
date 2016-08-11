@@ -32,6 +32,9 @@
                andBackGroundColor:(UIColor *)backgroundcolor;
                        
 ```
+######Example
+ ![image](https://github.com/976431yang/YQImageTool/blob/master/DEMO/ScreenShoot/corner.png)
+
 <br/>
 ####--------------------------------------------------缩略图
 ```Objective-C
@@ -43,6 +46,8 @@
                              Scale:(BOOL)Scale;
                                      
 ```
+######Example
+ ![image](https://github.com/976431yang/YQImageTool/blob/master/DEMO/ScreenShoot/thum.png)
 <br/>
 ####--------------------------------------------------水印
 ######生成带水印的图片
@@ -58,6 +63,8 @@
                                    waterScale:(BOOL)waterScale;
         
 ```
+######Example
+ ![image](https://github.com/976431yang/YQImageTool/blob/master/DEMO/ScreenShoot/water.png)
 <br/>
 ####--------------------------------------------------裁剪
 ```Objective-C
@@ -70,6 +77,8 @@
               backgroundColor:(UIColor *)backColor;
         
 ```
+######Example
+ ![image](https://github.com/976431yang/YQImageTool/blob/master/DEMO/ScreenShoot/cut.png)
 <br/>
 ####--------------------------------------------------根据遮罩图形状裁剪
 - 根据遮罩图片的形状，裁剪原图，并生成新的图片
@@ -82,6 +91,8 @@
                        andBackimage:(UIImage *)Backimage;
         
 ```
+######Example
+ ![image](https://github.com/976431yang/YQImageTool/blob/master/DEMO/ScreenShoot/mask.png)
 <br/>
 ####--------------------------------------------------生成带阴影的图片
 ```Objective-C
@@ -97,6 +108,8 @@
                                      andColor:(UIColor *)Color;
 
 ```
+######Example
+ ![image](https://github.com/976431yang/YQImageTool/blob/master/DEMO/ScreenShoot/shadow.png)
 <br/>
 ####--------------------------------------------------旋转
 ```Objective-C
@@ -106,6 +119,8 @@
                                  Angle:(CGFloat)Angle;
         
 ```
+######Example
+ ![image](https://github.com/976431yang/YQImageTool/blob/master/DEMO/ScreenShoot/rotation.png)
 <br/>
 ####--------------------------------------------------UIView转图片，提前渲染
 - 把UIView及它的子类控件 转换为UIImage
@@ -115,6 +130,8 @@
 ```Objective-C 
 +(UIImage *)imageWithUIView:(UIView *)view;
 ```
+######Example
+ ![image](https://github.com/976431yang/YQImageTool/blob/master/DEMO/ScreenShoot/view.png)
 
 ####--------------------------------------------------图片压缩
 自动引用:[YQImageCompressor](https://github.com/976431yang/YQImageCompressor/)
