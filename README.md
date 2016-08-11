@@ -115,3 +115,9 @@
 ```Objective-C 
 +(UIImage *)imageWithUIView:(UIView *)view;
 ```
+
+####--------------------------------------------------图片压缩
+自动引用:[YQImageCompressor](https://github.com/976431yang/YQImageCompressor/)
+使用方法: https://github.com/976431yang/YQImageCompressor/
+
+
