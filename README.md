@@ -62,7 +62,6 @@ Podfile: pod 'YQImageTool'
 ###### Example
  ![image](https://github.com/976431yang/YQImageTool/blob/master/DEMO/ScreenShoot/corner.png)
 
-<br/>
 #### --------------------------------------------------缩略图
 ```Objective-C
 //若Scale为YES，则原图会根据Size进行拉伸-会变形
