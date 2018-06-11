@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		413ED9DC0CCA3847814EBBF0 /* libPods-YQImageToolDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1D1B9392E836CC2F2661E7 /* libPods-YQImageToolDemoUITests.a */; };
+		8360BCB5C88DF5E7489D1E1B /* libPods-YQImageToolDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D117D6CAC63C2AD08F15AFE9 /* libPods-YQImageToolDemoTests.a */; };
 		9511837F1D5C5DC9007522D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9511837E1D5C5DC9007522D0 /* main.m */; };
 		951183821D5C5DC9007522D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 951183811D5C5DC9007522D0 /* AppDelegate.m */; };
 		951183851D5C5DC9007522D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 951183841D5C5DC9007522D0 /* ViewController.m */; };
@@ -15,8 +17,6 @@
 		9511838D1D5C5DC9007522D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9511838B1D5C5DC9007522D0 /* LaunchScreen.storyboard */; };
 		951183981D5C5DC9007522D0 /* YQImageToolDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 951183971D5C5DC9007522D0 /* YQImageToolDemoTests.m */; };
 		951183A31D5C5DC9007522D0 /* YQImageToolDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 951183A21D5C5DC9007522D0 /* YQImageToolDemoUITests.m */; };
-		9552F65E1D5C5E050033493D /* YQImageCompressTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F65B1D5C5E050033493D /* YQImageCompressTool.m */; };
-		9552F65F1D5C5E050033493D /* YQImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F65D1D5C5E050033493D /* YQImageTool.m */; };
 		9552F6651D5C5E840033493D /* OnlyCompressDataDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F6601D5C5E840033493D /* OnlyCompressDataDemo.m */; };
 		9552F6661D5C5E840033493D /* OnlyCompressImageDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F6621D5C5E840033493D /* OnlyCompressImageDemo.m */; };
 		9552F6671D5C5E840033493D /* OnlyResizeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F6641D5C5E840033493D /* OnlyResizeDemo.m */; };
@@ -39,6 +39,7 @@
 		9552F6A11D5C736D0033493D /* ShadowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F6A01D5C736D0033493D /* ShadowVC.m */; };
 		9552F6A41D5C772F0033493D /* RotationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F6A31D5C772F0033493D /* RotationVC.m */; };
 		9552F6A71D5C77F90033493D /* ViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9552F6A61D5C77F90033493D /* ViewVC.m */; };
+		EC4341076E295D6E7B7E7F86 /* libPods-YQImageToolDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F928F54F410268A52A443C1F /* libPods-YQImageToolDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FA0E4E84F8498D046FD9C98 /* Pods-YQImageToolDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YQImageToolDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YQImageToolDemoTests/Pods-YQImageToolDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3E8D3918F6CA938D9C042BC1 /* Pods-YQImageToolDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YQImageToolDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YQImageToolDemoUITests/Pods-YQImageToolDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5F1D1B9392E836CC2F2661E7 /* libPods-YQImageToolDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YQImageToolDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		716C0EFD273DC563EAB36632 /* Pods-YQImageToolDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YQImageToolDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YQImageToolDemo/Pods-YQImageToolDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9511837A1D5C5DC8007522D0 /* YQImageToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YQImageToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9511837E1D5C5DC9007522D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		951183801D5C5DC9007522D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,10 +80,6 @@
 		9511839E1D5C5DC9007522D0 /* YQImageToolDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YQImageToolDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		951183A21D5C5DC9007522D0 /* YQImageToolDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQImageToolDemoUITests.m; sourceTree = "<group>"; };
 		951183A41D5C5DC9007522D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9552F65A1D5C5E050033493D /* YQImageCompressTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQImageCompressTool.h; sourceTree = "<group>"; };
-		9552F65B1D5C5E050033493D /* YQImageCompressTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQImageCompressTool.m; sourceTree = "<group>"; };
-		9552F65C1D5C5E050033493D /* YQImageTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQImageTool.h; sourceTree = "<group>"; };
-		9552F65D1D5C5E050033493D /* YQImageTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQImageTool.m; sourceTree = "<group>"; };
 		9552F6601D5C5E840033493D /* OnlyCompressDataDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlyCompressDataDemo.m; sourceTree = "<group>"; };
 		9552F6611D5C5E840033493D /* OnlyCompressImageDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlyCompressImageDemo.h; sourceTree = "<group>"; };
 		9552F6621D5C5E840033493D /* OnlyCompressImageDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlyCompressImageDemo.m; sourceTree = "<group>"; };
@@ -120,6 +121,11 @@
 		9552F6A31D5C772F0033493D /* RotationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationVC.m; sourceTree = "<group>"; };
 		9552F6A51D5C77F90033493D /* ViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewVC.h; sourceTree = "<group>"; };
 		9552F6A61D5C77F90033493D /* ViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewVC.m; sourceTree = "<group>"; };
+		A0346C491A8570FB2E9FB418 /* Pods-YQImageToolDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YQImageToolDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YQImageToolDemoTests/Pods-YQImageToolDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		AECA2886CBB9BF01160E083A /* Pods-YQImageToolDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YQImageToolDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YQImageToolDemo/Pods-YQImageToolDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D117D6CAC63C2AD08F15AFE9 /* libPods-YQImageToolDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YQImageToolDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F401C89ECFEA60D9564FF5AB /* Pods-YQImageToolDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YQImageToolDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YQImageToolDemoUITests/Pods-YQImageToolDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F928F54F410268A52A443C1F /* libPods-YQImageToolDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YQImageToolDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC4341076E295D6E7B7E7F86 /* libPods-YQImageToolDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8360BCB5C88DF5E7489D1E1B /* libPods-YQImageToolDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,20 +149,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				413ED9DC0CCA3847814EBBF0 /* libPods-YQImageToolDemoUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		483B733ED1606C253C8648D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F928F54F410268A52A443C1F /* libPods-YQImageToolDemo.a */,
+				D117D6CAC63C2AD08F15AFE9 /* libPods-YQImageToolDemoTests.a */,
+				5F1D1B9392E836CC2F2661E7 /* libPods-YQImageToolDemoUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		951183711D5C5DC8007522D0 = {
 			isa = PBXGroup;
 			children = (
-				9552F6581D5C5E050033493D /* YQImageTool */,
 				9511837C1D5C5DC8007522D0 /* YQImageToolDemo */,
 				951183961D5C5DC9007522D0 /* YQImageToolDemoTests */,
 				951183A11D5C5DC9007522D0 /* YQImageToolDemoUITests */,
 				9511837B1D5C5DC8007522D0 /* Products */,
+				F854188A3605A63CB0400F96 /* Pods */,
+				483B733ED1606C253C8648D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -234,26 +254,6 @@
 			path = YQImageToolDemoUITests;
 			sourceTree = "<group>";
 		};
-		9552F6581D5C5E050033493D /* YQImageTool */ = {
-			isa = PBXGroup;
-			children = (
-				9552F6591D5C5E050033493D /* YQImageCompressor */,
-				9552F65C1D5C5E050033493D /* YQImageTool.h */,
-				9552F65D1D5C5E050033493D /* YQImageTool.m */,
-			);
-			name = YQImageTool;
-			path = YQImageToolDemo/YQImageTool;
-			sourceTree = "<group>";
-		};
-		9552F6591D5C5E050033493D /* YQImageCompressor */ = {
-			isa = PBXGroup;
-			children = (
-				9552F65A1D5C5E050033493D /* YQImageCompressTool.h */,
-				9552F65B1D5C5E050033493D /* YQImageCompressTool.m */,
-			);
-			path = YQImageCompressor;
-			sourceTree = "<group>";
-		};
 		9552F6781D5C5EC40033493D /* YQImageCompressorVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +279,19 @@
 			name = YQImageCompressorVC;
 			sourceTree = "<group>";
 		};
+		F854188A3605A63CB0400F96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				716C0EFD273DC563EAB36632 /* Pods-YQImageToolDemo.debug.xcconfig */,
+				AECA2886CBB9BF01160E083A /* Pods-YQImageToolDemo.release.xcconfig */,
+				0FA0E4E84F8498D046FD9C98 /* Pods-YQImageToolDemoTests.debug.xcconfig */,
+				A0346C491A8570FB2E9FB418 /* Pods-YQImageToolDemoTests.release.xcconfig */,
+				F401C89ECFEA60D9564FF5AB /* Pods-YQImageToolDemoUITests.debug.xcconfig */,
+				3E8D3918F6CA938D9C042BC1 /* Pods-YQImageToolDemoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -286,6 +299,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 951183A71D5C5DC9007522D0 /* Build configuration list for PBXNativeTarget "YQImageToolDemo" */;
 			buildPhases = (
+				88DBBD599666F143EE7FF28F /* [CP] Check Pods Manifest.lock */,
 				951183761D5C5DC8007522D0 /* Sources */,
 				951183771D5C5DC8007522D0 /* Frameworks */,
 				951183781D5C5DC8007522D0 /* Resources */,
@@ -303,6 +317,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 951183AA1D5C5DC9007522D0 /* Build configuration list for PBXNativeTarget "YQImageToolDemoTests" */;
 			buildPhases = (
+				23887DA7EADEB584A469F65A /* [CP] Check Pods Manifest.lock */,
 				9511838F1D5C5DC9007522D0 /* Sources */,
 				951183901D5C5DC9007522D0 /* Frameworks */,
 				951183911D5C5DC9007522D0 /* Resources */,
@@ -321,6 +336,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 951183AD1D5C5DC9007522D0 /* Build configuration list for PBXNativeTarget "YQImageToolDemoUITests" */;
 			buildPhases = (
+				8299FBA1B44D678598E157D1 /* [CP] Check Pods Manifest.lock */,
 				9511839A1D5C5DC9007522D0 /* Sources */,
 				9511839B1D5C5DC9007522D0 /* Frameworks */,
 				9511839C1D5C5DC9007522D0 /* Resources */,
@@ -408,6 +424,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23887DA7EADEB584A469F65A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YQImageToolDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8299FBA1B44D678598E157D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YQImageToolDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88DBBD599666F143EE7FF28F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YQImageToolDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		951183761D5C5DC8007522D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -435,8 +508,6 @@
 				9552F67E1D5C63490033493D /* IMageToolDemoShowViewController.m in Sources */,
 				9511837F1D5C5DC9007522D0 /* main.m in Sources */,
 				9552F6751D5C5EA40033493D /* BackDataDemo.m in Sources */,
-				9552F65E1D5C5E050033493D /* YQImageCompressTool.m in Sources */,
-				9552F65F1D5C5E050033493D /* YQImageTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +646,7 @@
 		};
 		951183A81D5C5DC9007522D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 716C0EFD273DC563EAB36632 /* Pods-YQImageToolDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CKAC5QB95T;
@@ -589,6 +661,7 @@
 		};
 		951183A91D5C5DC9007522D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AECA2886CBB9BF01160E083A /* Pods-YQImageToolDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CKAC5QB95T;
@@ -603,6 +676,7 @@
 		};
 		951183AB1D5C5DC9007522D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FA0E4E84F8498D046FD9C98 /* Pods-YQImageToolDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = YQImageToolDemoTests/Info.plist;
@@ -615,6 +689,7 @@
 		};
 		951183AC1D5C5DC9007522D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0346C491A8570FB2E9FB418 /* Pods-YQImageToolDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = YQImageToolDemoTests/Info.plist;
@@ -627,6 +702,7 @@
 		};
 		951183AE1D5C5DC9007522D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F401C89ECFEA60D9564FF5AB /* Pods-YQImageToolDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = YQImageToolDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -638,6 +714,7 @@
 		};
 		951183AF1D5C5DC9007522D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E8D3918F6CA938D9C042BC1 /* Pods-YQImageToolDemoUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = YQImageToolDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

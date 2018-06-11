@@ -25,9 +25,9 @@
  *
  *  @return 新生成的图片
  */
-+(UIImage *)getCornerImageAtOriginalImageCornerWithImage:(UIImage *)image
-                                           andCornerWith:(CGFloat)width
-                                      andBackGroundColor:(UIColor *)backgroundcolor;
++ (UIImage *)getCornerImageAtOriginalImageCornerWithImage:(UIImage *)image
+                                            andCornerWith:(CGFloat)width
+                                       andBackGroundColor:(UIColor *)backgroundcolor;
 
 /**
  *  根据Size生成圆角图片，图片会拉伸-变形
@@ -39,10 +39,10 @@
  *
  *  @return 新生成的图片
  */
-+(UIImage *)getCornerImageFitSize:(CGSize)Size
-                        WithImage:(UIImage *)image
-                    andCornerWith:(CGFloat)width
-               andBackGroundColor:(UIColor *)backgroundcolor;
++ (UIImage *)getCornerImageFitSize:(CGSize)Size
+                         WithImage:(UIImage *)image
+                     andCornerWith:(CGFloat)width
+                andBackGroundColor:(UIColor *)backgroundcolor;
 
 /**
  *  根据Size生成圆角图片，图片会自适应填充，伸展范围以外的部分会被裁剪掉-不会变形
@@ -54,10 +54,10 @@
  *
  *  @return 新生成的图片
  */
-+(UIImage *)getCornerImageFillSize:(CGSize)Size
-                         WithImage:(UIImage *)image
-                     andCornerWith:(CGFloat)width
-                andBackGroundColor:(UIColor *)backgroundcolor;
++ (UIImage *)getCornerImageFillSize:(CGSize)Size
+                          WithImage:(UIImage *)image
+                      andCornerWith:(CGFloat)width
+                 andBackGroundColor:(UIColor *)backgroundcolor;
 
 #pragma mark --------缩略图
 //--------------------------------------------------缩略图
@@ -70,9 +70,9 @@
  *
  *  @return 新生成的图片
  */
-+(UIImage *)getThumbImageWithImage:(UIImage *)image
-                           andSize:(CGSize)Size
-                             Scale:(BOOL)Scale;
++ (UIImage *)getThumbImageWithImage:(UIImage *)image
+                            andSize:(CGSize)Size
+                              Scale:(BOOL)Scale;
 
 #pragma mark --------水印
 //--------------------------------------------------水印
@@ -87,11 +87,11 @@
  *
  *  @return 新生成的图片
  */
-+(UIImage *)GetWaterPrintedImageWithBackImage:(UIImage *)backImage
-                                andWaterImage:(UIImage *)waterImage
-                                       inRect:(CGRect)waterRect
-                                        alpha:(CGFloat)alpha
-                                   waterScale:(BOOL)waterScale;
++ (UIImage *)GetWaterPrintedImageWithBackImage:(UIImage *)backImage
+                                 andWaterImage:(UIImage *)waterImage
+                                        inRect:(CGRect)waterRect
+                                         alpha:(CGFloat)alpha
+                                    waterScale:(BOOL)waterScale;
 
 #pragma mark --------裁剪
 //--------------------------------------------------裁剪
@@ -106,10 +106,10 @@
  *
  *  @return 新生成的图片
  */
-+(UIImage *)cutImageWithImage:(UIImage *)image
-                      atPoint:(CGPoint)Point
-                     withSize:(CGSize)Size
-              backgroundColor:(UIColor *)backColor;
++ (UIImage *)cutImageWithImage:(UIImage *)image
+                       atPoint:(CGPoint)Point
+                      withSize:(CGSize)Size
+               backgroundColor:(UIColor *)backColor;
 
 #pragma mark --------根据遮罩图形状裁剪
 //--------------------------------------------------根据遮罩图形状裁剪
@@ -123,8 +123,8 @@
  *
  *  @return 新生成的图片
  */
-+(UIImage *)creatImageWithMaskImage:(UIImage *)MaskImage
-                       andBackimage:(UIImage *)Backimage;
++ (UIImage *)creatImageWithMaskImage:(UIImage *)MaskImage
+                        andBackimage:(UIImage *)Backimage;
 
 #pragma mark --------生成阴影
 //--------------------------------------------------生成阴影
@@ -139,11 +139,11 @@
  *
  *  @return 新生成的图片
  */
-+(UIImage *)creatShadowImageWithOriginalImage:(UIImage *)image
-                              andShadowOffset:(CGSize)offset
-                                 andBlurWidth:(CGFloat)blurWidth
-                                     andAlpha:(CGFloat)Alpha
-                                     andColor:(UIColor *)Color;
++ (UIImage *)creatShadowImageWithOriginalImage:(UIImage *)image
+                               andShadowOffset:(CGSize)offset
+                                  andBlurWidth:(CGFloat)blurWidth
+                                      andAlpha:(CGFloat)Alpha
+                                      andColor:(UIColor *)Color;
 
 #pragma mark --------旋转
 //--------------------------------------------------旋转
@@ -155,8 +155,8 @@
  *
  *  @return 新生成的图片
  */
-+(UIImage  *)GetRotationImageWithImage:(UIImage *)image
-                                 Angle:(CGFloat)Angle;
++ (UIImage  *)GetRotationImageWithImage:(UIImage *)image
+                                  Angle:(CGFloat)Angle;
 
 #pragma mark --------UIView转图片，提前渲染
 //--------------------------------------------------UIView转图片，提前渲染
@@ -170,6 +170,6 @@
  *
  *  @return 渲染出的图片
  */
-+(UIImage *)imageWithUIView:(UIView *)view;
++ (UIImage *)imageWithUIView:(UIView *)view;
 
 @end

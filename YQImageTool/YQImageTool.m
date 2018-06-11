@@ -30,29 +30,16 @@
                                            andCornerWith:(CGFloat)width
                                       andBackGroundColor:(UIColor *)backgroundcolor
 {
-    UIGraphicsBeginImageContextWithOptions(image.size, NO, 0.0);
+    UIGraphicsBeginImageContextWithOptions(image.size, NO, image.scale);
     
-    CGRect bounds = CGRectMake(0,
-                               0,
-                               image.size.width,
-                               image.size.height);
-    
-    
-    CGRect rect   = CGRectMake(0,
-                               0,
-                               image.size.width,
-                               image.size.height);
+    CGRect bounds = CGRectMake(0, 0, image.size.width, image.size.height);
+    CGRect rect   = CGRectMake(0, 0, image.size.width, image.size.height);
     
     [backgroundcolor set];
     UIRectFill(bounds);
-    
     [[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:width] addClip];
-    
     [image drawInRect:bounds];
-    
-    
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    
     UIGraphicsEndImageContext();
     
     return newImage;
@@ -73,32 +60,17 @@
                     andCornerWith:(CGFloat)width
                andBackGroundColor:(UIColor *)backgroundcolor
 {
+    UIGraphicsBeginImageContextWithOptions(Size, NO, image.scale);
     
-    UIGraphicsBeginImageContextWithOptions(Size, NO, 0.0);
-    
-    
-    CGRect bounds = CGRectMake(0,
-                               0,
-                               Size.width,
-                               Size.height);
-    
-    CGRect rect   = CGRectMake(0,
-                               0,
-                               Size.width,
-                               Size.height);
+    CGRect bounds = CGRectMake(0, 0, Size.width, Size.height);
+    CGRect rect   = CGRectMake(0, 0, Size.width, Size.height);
     
     [backgroundcolor set];
     UIRectFill(bounds);
-    
     [[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:width] addClip];
-    
     [image drawInRect:bounds];
-    
-    
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    
     UIGraphicsEndImageContext();
-    
     return newImage;
 }
 
@@ -118,7 +90,7 @@
                 andBackGroundColor:(UIColor *)backgroundcolor
 
 {
-    UIGraphicsBeginImageContextWithOptions(Size, NO, 0.0);
+    UIGraphicsBeginImageContextWithOptions(Size, NO, image.scale);
     
     CGFloat bili_imageWH = image.size.width/image.size.height;
     CGFloat bili_SizeWH  = Size.width/Size.height;
@@ -126,56 +98,28 @@
     CGRect bounds;
     
     if (bili_imageWH > bili_SizeWH) {
-        
         CGFloat bili_SizeH_imageH = Size.height/image.size.height;
-        
         CGFloat height = image.size.height*bili_SizeH_imageH;
-        
         CGFloat width = height * bili_imageWH;
-        
         CGFloat x = -(width - Size.width)/2;
-        
         CGFloat y = 0;
-        
-        bounds = CGRectMake(x,
-                            y,
-                            width,
-                            height);
+        bounds = CGRectMake(x, y, width, height);
     }else{
-        
         CGFloat bili_SizeW_imageW = Size.width/image.size.width;
-        
         CGFloat width = image.size.width * bili_SizeW_imageW;
-        
         CGFloat height = width / bili_imageWH;
-        
         CGFloat x = 0;
-        
         CGFloat y = -(height - Size.height)/2;
-        
-        bounds = CGRectMake(x,
-                            y,
-                            width,
-                            height);
-        
+        bounds = CGRectMake(x, y, width, height);
     }
-    
-    CGRect rect   = CGRectMake(0,
-                               0,
-                               Size.width,
-                               Size.height);
-    
+    CGRect rect   = CGRectMake(0, 0, Size.width, Size.height);
     
     [backgroundcolor set];
     UIRectFill(bounds);
-    
     [[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:width] addClip];
-    
     [image drawInRect:bounds];
     
-    
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    
     UIGraphicsEndImageContext();
     
     return newImage;
@@ -200,26 +144,21 @@
                                         alpha:(CGFloat)alpha
                                    waterScale:(BOOL)waterScale
 {
-    //说明，在最后UIImageView转UIImage的时候，View属性的size会压缩成1倍像素的size,所以本方法内涉及到Size的地方需要乘以2或3，才能保证最后的清晰度
-    
-    //默认制作X2像素，也可改成3或其它
-    CGFloat clear = 2;
-    
     UIImageView *backIMGV = [[UIImageView alloc]init];
     backIMGV.backgroundColor = [UIColor clearColor];
     backIMGV.frame = CGRectMake(0,
                                 0,
-                                backImage.size.width*clear,
-                                backImage.size.height*clear);
+                                backImage.size.width,
+                                backImage.size.height);
     backIMGV.contentMode = UIViewContentModeScaleAspectFill;
     backIMGV.image = backImage;
     
     UIImageView *waterIMGV = [[UIImageView alloc]init];
     waterIMGV.backgroundColor = [UIColor clearColor];
-    waterIMGV.frame = CGRectMake(waterRect.origin.x*clear,
-                                 waterRect.origin.y*clear,
-                                 waterRect.size.width*clear,
-                                 waterRect.size.height*clear);
+    waterIMGV.frame = CGRectMake(waterRect.origin.x,
+                                 waterRect.origin.y,
+                                 waterRect.size.width,
+                                 waterRect.size.height);
     if (waterScale) {
         waterIMGV.contentMode = UIViewContentModeScaleToFill;
     }else{
@@ -252,19 +191,17 @@
     CGRect rect;
     
     if (Backimage.size.height>Backimage.size.width) {
-        rect     = CGRectMake(0,
-                              (Backimage.size.height-Backimage.size.width),
-                              Backimage.size.width*2,
-                              Backimage.size.width*2);
+        rect = CGRectMake(0,
+                          (Backimage.size.height-Backimage.size.width),
+                          Backimage.size.width*2,
+                          Backimage.size.width*2);
     }else{
-        rect     = CGRectMake((Backimage.size.width-Backimage.size.height),
-                              0,
-                              Backimage.size.height*2,
-                              Backimage.size.height*2);
+        rect = CGRectMake((Backimage.size.width-Backimage.size.height),
+                          0,
+                          Backimage.size.height*2,
+                          Backimage.size.height*2);
     }
     
-    
-    NSLog(@"%f",(Backimage.size.height-Backimage.size.height)/2);
     UIImage *cutIMG = [UIImage imageWithCGImage:CGImageCreateWithImageInRect([Backimage CGImage], rect)];
     
     //遮罩图
@@ -272,12 +209,10 @@
     //原图
     CGImageRef originImage = cutIMG.CGImage;
     
-    
     CGContextRef mainViewContentContext;
     CGColorSpaceRef colorSpace;
     
     colorSpace = CGColorSpaceCreateDeviceRGB();
-    // create a bitmap graphics context the size of the image
     
     mainViewContentContext = CGBitmapContextCreate (NULL,
                                                     rect.size.width,
@@ -286,7 +221,7 @@
                                                     0,
                                                     colorSpace,
                                                     kCGImageAlphaPremultipliedLast);
-    // free the rgb colorspace
+    
     CGColorSpaceRelease(colorSpace);
     if (mainViewContentContext==NULL)
     {
@@ -294,31 +229,21 @@
     }
     
     CGContextClipToMask(mainViewContentContext,
-                        CGRectMake(0,
-                                   0,
+                        CGRectMake(0, 0,
                                    rect.size.width,
                                    rect.size.height),
                         maskImage);
     
     CGContextDrawImage(mainViewContentContext,
-                       CGRectMake(0,
-                                  0,
+                       CGRectMake(0, 0,
                                   rect.size.width,
                                   rect.size.height),
                        originImage);
     
-    // Create CGImageRef of the main view bitmap content, and then
-    // release that bitmap context
     CGImageRef mainViewContentBitmapContext = CGBitmapContextCreateImage(mainViewContentContext);
     CGContextRelease(mainViewContentContext);
-    // convert the finished resized image to a UIImage
     UIImage *theImage = [UIImage imageWithCGImage:mainViewContentBitmapContext];
-    // image is retained by the property setting above, so we can
-    // release the original
     CGImageRelease(mainViewContentBitmapContext);
-    
-    
-    
     
     return theImage;
     
@@ -337,61 +262,34 @@
  */
 +(UIImage *)getThumbImageWithImage:(UIImage *)image andSize:(CGSize)Size Scale:(BOOL)Scale{
     
-    UIGraphicsBeginImageContextWithOptions(Size, NO, 0.0);
+    UIGraphicsBeginImageContextWithOptions(Size, NO, image.scale);
+    CGRect rect = CGRectMake(0, 0, Size.width, Size.height);
     
-    CGRect rect = CGRectMake(0,
-                             0,
-                             Size.width,
-                             Size.height);
     if (!Scale) {
-        
         CGFloat bili_imageWH = image.size.width/image.size.height;
         CGFloat bili_SizeWH  = Size.width/Size.height;
         
         if (bili_imageWH > bili_SizeWH) {
-            
             CGFloat bili_SizeH_imageH = Size.height/image.size.height;
-            
             CGFloat height = image.size.height*bili_SizeH_imageH;
-            
             CGFloat width = height * bili_imageWH;
-            
             CGFloat x = -(width - Size.width)/2;
-            
             CGFloat y = 0;
-            
-            rect = CGRectMake(x,
-                              y,
-                              width,
-                              height);
-            
+            rect = CGRectMake(x, y, width, height);
         }else{
-            
             CGFloat bili_SizeW_imageW = Size.width/image.size.width;
-            
             CGFloat width = image.size.width * bili_SizeW_imageW;
-            
             CGFloat height = width / bili_imageWH;
-            
             CGFloat x = 0;
-            
             CGFloat y = -(height - Size.height)/2;
-            
-            rect = CGRectMake(x,
-                              y,
-                              width,
-                              height);
-            
+            rect = CGRectMake(x, y, width, height);
         }
     }
     
     [[UIColor clearColor] set];
     UIRectFill(rect);
-    
     [image drawInRect:rect];
-    
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    
     UIGraphicsEndImageContext();
     
     return newImage;
@@ -416,15 +314,13 @@
                                      andAlpha:(CGFloat)Alpha
                                      andColor:(UIColor *)Color
 {
-    CGFloat Scale = 2;
-    
-    CGFloat width  = (image.size.width+offset.width+blurWidth*4)*Scale;
-    CGFloat height = (image.size.height+offset.height+blurWidth*4)*Scale;
+    CGFloat width  = (image.size.width+offset.width+blurWidth*4);
+    CGFloat height = (image.size.height+offset.height+blurWidth*4);
     if(offset.width<0){
-        width  = (image.size.width-offset.width+blurWidth*4)*Scale;
+        width  = (image.size.width-offset.width+blurWidth*4);
     }
     if(offset.height<0){
-        height = (image.size.height-offset.height+blurWidth*4)*Scale;
+        height = (image.size.height-offset.height+blurWidth*4);
     }
     
     UIView *RootBackView = [[UIView alloc]initWithFrame:CGRectMake(0,0,
@@ -432,36 +328,32 @@
                                                                    height)];
     RootBackView.backgroundColor = [UIColor clearColor];
     
-    UIImageView *ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(blurWidth*2*Scale,
-                                                                          blurWidth*2*Scale,
-                                                                          image.size.width*Scale,
-                                                                          image.size.height*Scale)];
+    UIImageView *ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(blurWidth*2,
+                                                                          blurWidth*2,
+                                                                          image.size.width,
+                                                                          image.size.height)];
     if(offset.width<0){
-        ImageView.frame = CGRectMake((blurWidth*2-offset.width)*Scale,
+        ImageView.frame = CGRectMake(blurWidth*2-offset.width,
                                      ImageView.frame.origin.y,
                                      ImageView.frame.size.width,
                                      ImageView.frame.size.height);
     }
     if(offset.height<0){
         ImageView.frame = CGRectMake(ImageView.frame.origin.x,
-                                     (blurWidth*2-offset.height)*Scale,
+                                     blurWidth*2-offset.height,
                                      ImageView.frame.size.width,
                                      ImageView.frame.size.height);
     }
     ImageView.backgroundColor = [UIColor clearColor];
-    ImageView.layer.shadowOffset = CGSizeMake(offset.width*Scale, offset.height*Scale);
-    ImageView.layer.shadowRadius = blurWidth*Scale;
+    ImageView.layer.shadowOffset = CGSizeMake(offset.width, offset.height);
+    ImageView.layer.shadowRadius = blurWidth;
     ImageView.layer.shadowOpacity = Alpha;
     ImageView.layer.shadowColor  = Color.CGColor;
     ImageView.image = image;
     
     [RootBackView addSubview:ImageView];
     
-    //ImageView.transform = CGAffineTransformMakeRotation(3.1415926*0.25);
-    //ImageView.transform = CGAffineTransformMakeScale(2, 2);
-    
     UIImage *newImage = [self imageWithUIView:RootBackView];
-    
     return newImage;
 }
 
@@ -486,18 +378,13 @@
     RootBackView.transform = t;
     CGSize rotatedSize = RootBackView.frame.size;
     
-    
-    UIGraphicsBeginImageContext(rotatedSize);
-    
+    UIGraphicsBeginImageContextWithOptions(rotatedSize, NO, image.scale);
     
     CGContextRef theContext = UIGraphicsGetCurrentContext();
-    
     
     CGContextTranslateCTM(theContext, rotatedSize.width/2, rotatedSize.height/2);
     CGContextRotateCTM(theContext, Angle * M_PI / 180);
     CGContextScaleCTM(theContext, 1.0, -1.0);
-    
-    
     
     CGContextDrawImage(theContext,
                        CGRectMake(-image.size.width / 2,
@@ -531,25 +418,15 @@
                      withSize:(CGSize)Size
               backgroundColor:(UIColor *)backColor
 {
-    UIGraphicsBeginImageContextWithOptions(Size, NO, 0.0);
-    
-    CGRect bounds = CGRectMake(0,
-                               0,
-                               Size.width,
-                               Size.height);
-    
-    CGRect rect   = CGRectMake(-Point.x,
-                               -Point.y,
+    UIGraphicsBeginImageContextWithOptions(Size, NO, image.scale);
+    CGRect bounds = CGRectMake(0, 0, Size.width, Size.height);
+    CGRect rect   = CGRectMake(-Point.x, -Point.y,
                                image.size.width,
                                image.size.height);
     
-    
     [backColor set];
     UIRectFill(bounds);
-    
     [image drawInRect:rect];
-    
-    
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext();
@@ -561,9 +438,6 @@
 //--------------------------------------------------UIView转图片，提前渲染
 /**
  *  把UIView渲染成图片
- 注：由于ios的编程像素和实际显示像素不同，在X2和X3的retina屏幕设备上，使用此方法生成的图片大小将会被还原成1倍像素，
- 从而导致再次显示到UIImageView上显示时，清晰度下降。所以使用此方法前，请先将要转换的UIview及它的所有SubView
- 的frame里的坐标和大小都根据需要X2或X3。
  *
  *  @param view 想渲染的UIView
  *
@@ -571,8 +445,7 @@
  */
 +(UIImage *)imageWithUIView:(UIView *)view
 {
-    //UIGraphicsBeginImageContext(view.bounds.size);
-    UIGraphicsBeginImageContext(CGSizeMake(view.bounds.size.width, view.bounds.size.height));
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, [UIScreen mainScreen].scale);
     
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     

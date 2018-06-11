@@ -1,0 +1,16 @@
+PODS:
+  - YQImageTool (1.0.0)
+
+DEPENDENCIES:
+  - YQImageTool (from `../`)
+
+EXTERNAL SOURCES:
+  YQImageTool:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  YQImageTool: c1eee445eae0cf86d53158e5cef618767ec789af
+
+PODFILE CHECKSUM: 919671d7827045636cdd97cad545c849df4d3074
+
+COCOAPODS: 1.5.0
