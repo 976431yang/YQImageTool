@@ -1,7 +1,4 @@
 # YQImageTool
-[![Build Status](https://travis-ci.org/976431yang/YQImageTool.svg?branch=master)](https://travis-ci.org/976431yang/YQImageTool)
-[![Pod Version](https://img.shields.io/badge/pod-1.0.0-blue.svg)](http://cocoadocs.org/docsets/YQImageCompressor/)
-[![Pod Platform](https://img.shields.io/badge/platform-ios-lightgray.svg)](http://cocoadocs.org/docsets/YQImageCompressor/)
 
 ### 微博：畸形滴小男孩
 简易图片处理工具：圆角、缩略图、水印、裁剪、根据遮罩图形状裁剪、阴影、旋转、渲染UIView成图片、压缩
