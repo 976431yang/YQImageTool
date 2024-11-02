@@ -21,7 +21,7 @@
 #import "OnlyResizeDemo.h"
 
 @interface CompressorViewController ()<UITableViewDataSource,UITableViewDelegate>
-@property(nonatomic,strong)UITableView *tabV;
+@property (nonatomic,strong)UITableView *tabV;
 
 @end
 
@@ -38,19 +38,19 @@
     [self setup];
 }
 
--(void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
 }
 
--(void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
 }
 
--(void)viewWillDisappear:(BOOL)animated{
+- (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
 }
 
--(void)viewDidDisappear:(BOOL)animated{
+- (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
 }
 
@@ -62,7 +62,7 @@
 
 #pragma mark --------Functions
 //初始化
--(void)setup{
+- (void)setup {
     
     self.title = @"压缩到200KB以下";
     
@@ -70,7 +70,7 @@
         UIBarButtonItem *BTN = [[UIBarButtonItem alloc]initWithTitle:@"说明"
                                                                style:UIBarButtonItemStylePlain
                                                               target:self
-                                                              action:@selector(ShowInfo)];
+                                                              action:@selector(showInfo)];
         BTN;
     });
     
@@ -85,7 +85,7 @@
     [self.tabV registerClass:[UITableViewCell class] forCellReuseIdentifier:@"MyCell"];
 }
 
--(void)ShowInfo{
+- (void)showInfo{
     UIAlertView *alertDialog;
     alertDialog = [[UIAlertView alloc]
                    initWithTitle:@"说明"
@@ -97,11 +97,11 @@
 }
 
 #pragma mark --------UITableViewDataSource,UITableViewDelegate
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 3;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     switch (section) {
         case 2:
             return 3;
@@ -113,33 +113,33 @@
     }
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 20;
 }
 
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UILabel *TitleLab = [[UILabel alloc]initWithFrame:CGRectMake(0,
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UILabel *titleLab = [[UILabel alloc]initWithFrame:CGRectMake(0,
                                                                  0,
                                                                  kScreenWidth,
                                                                  20)];
-    TitleLab.font = [UIFont systemFontOfSize:15];
-    TitleLab.textAlignment = NSTextAlignmentCenter;
-    TitleLab.numberOfLines = 0;
+    titleLab.font = [UIFont systemFontOfSize:15];
+    titleLab.textAlignment = NSTextAlignmentCenter;
+    titleLab.numberOfLines = 0;
     
     switch (section) {
         case 0:
         {
-            TitleLab.text = @"后台压缩（异步进行，不会卡住前台进程）";
+            titleLab.text = @"后台压缩（异步进行，不会卡住前台进程）";
         }
             break;
         case 1:
         {
-            TitleLab.text = @"前台压缩（可能比较慢，造成当前进程卡住）";
+            titleLab.text = @"前台压缩（可能比较慢，造成当前进程卡住）";
         }
             break;
         case 2:
         {
-            TitleLab.text = @"细化调用方法";
+            titleLab.text = @"细化调用方法";
         }
             break;
             
@@ -147,14 +147,14 @@
             break;
     }
     
-    return TitleLab;
+    return titleLab;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 40;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     //自动从重用队列中取得名称是MyCell的注册对象,如果没有，就会生成一个
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCell" forIndexPath:indexPath];
     
@@ -228,7 +228,7 @@
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self.tabV deselectRowAtIndexPath:indexPath animated:YES];
     
     UITableViewCell *cell = [self.tabV cellForRowAtIndexPath:indexPath];

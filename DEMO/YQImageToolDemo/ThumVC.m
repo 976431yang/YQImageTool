@@ -14,7 +14,7 @@
 
 @implementation ThumVC
 
--(void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
     
@@ -23,13 +23,13 @@
     
     self.item2.IMGV.image = [YQImageTool getThumbImageWithImage:self.bigIMG
                                                         andSize:self.item2.IMGV.frame.size
-                                                          Scale:YES];
+                                                          scale:YES];
     self.item2.titleStr.text = @"参数Scale为YES";
     
     
     self.item3.IMGV.image = [YQImageTool getThumbImageWithImage:self.bigIMG
                                                         andSize:self.item3.IMGV.frame.size
-                                                          Scale:NO];
+                                                          scale:NO];
     self.item3.titleStr.text = @"参数Scale为NO";
     
     self.item4.hidden = YES;

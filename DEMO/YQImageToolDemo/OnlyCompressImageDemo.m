@@ -14,16 +14,16 @@
 
 @implementation OnlyCompressImageDemo
 
--(void)viewDidLoad{
+- (void)viewDidLoad{
     [super viewDidLoad];
     
     [self compressImage];
 }
 
--(void)compressImage{
+- (void)compressImage{
     self.title = @"正在压缩..";
     
-    UIImage *newIMG = [YQImageCompressTool OnlyCompressToImageWithImage:self.oldIMG FileSize:200];
+    UIImage *newIMG = [YQImageCompressTool onlyCompressToImageWithImage:self.oldIMG fileSize:200];
     
     NSData *newIMGData = UIImageJPEGRepresentation(newIMG,1);
     

@@ -10,8 +10,8 @@
 
 @interface ImageToolDemoItem : UIView
 
-@property(nonatomic,strong)UILabel *titleStr;
+@property (nonatomic,strong) UILabel *titleStr;
 
-@property(nonatomic,strong)UIImageView *IMGV;
+@property (nonatomic,strong) UIImageView *IMGV;
 
 @end

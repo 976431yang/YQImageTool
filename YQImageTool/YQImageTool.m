@@ -26,10 +26,9 @@
  *
  *  @return 新生成的图片
  */
-+(UIImage *)getCornerImageAtOriginalImageCornerWithImage:(UIImage *)image
-                                           andCornerWith:(CGFloat)width
-                                      andBackGroundColor:(UIColor *)backgroundcolor
-{
++ (UIImage *)getCornerImageAtOriginalImageCornerWithImage:(UIImage *)image
+                                            andCornerWith:(CGFloat)width
+                                       andBackGroundColor:(UIColor *)backgroundcolor {
     UIGraphicsBeginImageContextWithOptions(image.size, NO, image.scale);
     
     CGRect bounds = CGRectMake(0, 0, image.size.width, image.size.height);
@@ -48,22 +47,21 @@
 /**
  *  根据Size生成圆角图片，图片会拉伸-变形
  *
- *  @param Size            最终想要的图片的尺寸
+ *  @param size            最终想要的图片的尺寸
  *  @param image           原图
  *  @param width           圆角大小
  *  @param backgroundcolor 背景颜色
  *
  *  @return 新生成的图片
  */
-+(UIImage *)getCornerImageFitSize:(CGSize)Size
++ (UIImage *)getCornerImageFitSize:(CGSize)size
                         WithImage:(UIImage *)image
                     andCornerWith:(CGFloat)width
-               andBackGroundColor:(UIColor *)backgroundcolor
-{
-    UIGraphicsBeginImageContextWithOptions(Size, NO, image.scale);
+               andBackGroundColor:(UIColor *)backgroundcolor {
+    UIGraphicsBeginImageContextWithOptions(size, NO, image.scale);
     
-    CGRect bounds = CGRectMake(0, 0, Size.width, Size.height);
-    CGRect rect   = CGRectMake(0, 0, Size.width, Size.height);
+    CGRect bounds = CGRectMake(0, 0, size.width, size.height);
+    CGRect rect   = CGRectMake(0, 0, size.width, size.height);
     
     [backgroundcolor set];
     UIRectFill(bounds);
@@ -77,42 +75,40 @@
 /**
  *  根据Size生成圆角图片，图片会自适应填充，伸展范围以外的部分会被裁剪掉-不会变形
  *
- *  @param Size            最终想要的图片的尺寸
+ *  @param size            最终想要的图片的尺寸
  *  @param image           原图
  *  @param width           圆角大小
  *  @param backgroundcolor 背景颜色
  *
  *  @return 新生成的图片
  */
-+(UIImage *)getCornerImageFillSize:(CGSize)Size
-                         WithImage:(UIImage *)image
-                     andCornerWith:(CGFloat)width
-                andBackGroundColor:(UIColor *)backgroundcolor
-
-{
-    UIGraphicsBeginImageContextWithOptions(Size, NO, image.scale);
++ (UIImage *)getCornerImageFillSize:(CGSize)size
+                          WithImage:(UIImage *)image
+                      andCornerWith:(CGFloat)width
+                 andBackGroundColor:(UIColor *)backgroundcolor {
+    UIGraphicsBeginImageContextWithOptions(size, NO, image.scale);
     
     CGFloat bili_imageWH = image.size.width/image.size.height;
-    CGFloat bili_SizeWH  = Size.width/Size.height;
+    CGFloat bili_SizeWH  = size.width/size.height;
     
     CGRect bounds;
     
     if (bili_imageWH > bili_SizeWH) {
-        CGFloat bili_SizeH_imageH = Size.height/image.size.height;
+        CGFloat bili_SizeH_imageH = size.height/image.size.height;
         CGFloat height = image.size.height*bili_SizeH_imageH;
         CGFloat width = height * bili_imageWH;
-        CGFloat x = -(width - Size.width)/2;
+        CGFloat x = - (width - size.width)/2;
         CGFloat y = 0;
         bounds = CGRectMake(x, y, width, height);
     }else{
-        CGFloat bili_SizeW_imageW = Size.width/image.size.width;
+        CGFloat bili_SizeW_imageW = size.width/image.size.width;
         CGFloat width = image.size.width * bili_SizeW_imageW;
         CGFloat height = width / bili_imageWH;
         CGFloat x = 0;
-        CGFloat y = -(height - Size.height)/2;
+        CGFloat y = - (height - size.height)/2;
         bounds = CGRectMake(x, y, width, height);
     }
-    CGRect rect   = CGRectMake(0, 0, Size.width, Size.height);
+    CGRect rect   = CGRectMake(0, 0, size.width, size.height);
     
     [backgroundcolor set];
     UIRectFill(bounds);
@@ -138,16 +134,14 @@
  *
  *  @return 新生成的图片
  */
-+(UIImage *)GetWaterPrintedImageWithBackImage:(UIImage *)backImage
++ (UIImage *)getWaterPrintedImageWithBackImage:(UIImage *)backImage
                                 andWaterImage:(UIImage *)waterImage
                                        inRect:(CGRect)waterRect
                                         alpha:(CGFloat)alpha
-                                   waterScale:(BOOL)waterScale
-{
+                                   waterScale:(BOOL)waterScale {
     UIImageView *backIMGV = [[UIImageView alloc]init];
     backIMGV.backgroundColor = [UIColor clearColor];
-    backIMGV.frame = CGRectMake(0,
-                                0,
+    backIMGV.frame = CGRectMake(0, 0,
                                 backImage.size.width,
                                 backImage.size.height);
     backIMGV.contentMode = UIViewContentModeScaleAspectFill;
@@ -161,7 +155,7 @@
                                  waterRect.size.height);
     if (waterScale) {
         waterIMGV.contentMode = UIViewContentModeScaleToFill;
-    }else{
+    } else {
         waterIMGV.contentMode = UIViewContentModeScaleAspectFill;
     }
     waterIMGV.alpha = alpha;
@@ -181,31 +175,32 @@
  原图与遮罩图片宽高最好都是1：1。若比例不同，则会居中。
  若因比例问题达不到效果，可用下面的UIview转UIImage的方法，先制作1：1的UIview，然后转成UIImage使用此功能
  *
- *  @param MaskImage 遮罩图片：遮罩图片最好是要显示的区域为纯黑色，不显示的区域为透明色。
- *  @param Backimage 准备裁剪的图片
+ *  @param maskImage 遮罩图片：遮罩图片最好是要显示的区域为纯黑色，不显示的区域为透明色。
+ *  @param backimage 准备裁剪的图片
  *
  *  @return 新生成的图片
  */
-+(UIImage *)creatImageWithMaskImage:(UIImage *)MaskImage andBackimage:(UIImage *)Backimage{
++ (UIImage *)creatImageWithMaskImage:(UIImage *)maskImage
+                        andBackimage:(UIImage *)backimage {
     
     CGRect rect;
     
-    if (Backimage.size.height>Backimage.size.width) {
+    if (backimage.size.height>backimage.size.width) {
         rect = CGRectMake(0,
-                          (Backimage.size.height-Backimage.size.width),
-                          Backimage.size.width*2,
-                          Backimage.size.width*2);
-    }else{
-        rect = CGRectMake((Backimage.size.width-Backimage.size.height),
+                          (backimage.size.height - backimage.size.width),
+                          backimage.size.width * 2,
+                          backimage.size.width * 2);
+    } else {
+        rect = CGRectMake((backimage.size.width - backimage.size.height),
                           0,
-                          Backimage.size.height*2,
-                          Backimage.size.height*2);
+                          backimage.size.height * 2,
+                          backimage.size.height * 2);
     }
     
-    UIImage *cutIMG = [UIImage imageWithCGImage:CGImageCreateWithImageInRect([Backimage CGImage], rect)];
+    UIImage *cutIMG = [UIImage imageWithCGImage:CGImageCreateWithImageInRect([backimage CGImage], rect)];
     
     //遮罩图
-    CGImageRef maskImage = MaskImage.CGImage;
+    CGImageRef maskCGImage = maskImage.CGImage;
     //原图
     CGImageRef originImage = cutIMG.CGImage;
     
@@ -214,30 +209,25 @@
     
     colorSpace = CGColorSpaceCreateDeviceRGB();
     
-    mainViewContentContext = CGBitmapContextCreate (NULL,
-                                                    rect.size.width,
-                                                    rect.size.height,
-                                                    8,
-                                                    0,
-                                                    colorSpace,
-                                                    kCGImageAlphaPremultipliedLast);
+    mainViewContentContext = CGBitmapContextCreate(NULL,
+                                                   rect.size.width,
+                                                   rect.size.height,
+                                                   8,
+                                                   0,
+                                                   colorSpace,
+                                                   kCGImageAlphaPremultipliedLast);
     
     CGColorSpaceRelease(colorSpace);
-    if (mainViewContentContext==NULL)
-    {
+    if (mainViewContentContext == NULL) {
         NSLog(@"error");
     }
     
     CGContextClipToMask(mainViewContentContext,
-                        CGRectMake(0, 0,
-                                   rect.size.width,
-                                   rect.size.height),
-                        maskImage);
+                        CGRectMake(0, 0, rect.size.width, rect.size.height),
+                        maskCGImage);
     
     CGContextDrawImage(mainViewContentContext,
-                       CGRectMake(0, 0,
-                                  rect.size.width,
-                                  rect.size.height),
+                       CGRectMake(0, 0, rect.size.width, rect.size.height),
                        originImage);
     
     CGImageRef mainViewContentBitmapContext = CGBitmapContextCreateImage(mainViewContentContext);
@@ -255,33 +245,33 @@
  *  得到图片的缩略图
  *
  *  @param image 原图
- *  @param Size  想得到的缩略图尺寸
- *  @param Scale Scale为YES：原图会根据Size进行拉伸-会变形，Scale为NO：原图会根据Size进行填充-不会变形
+ *  @param size  想得到的缩略图尺寸
+ *  @param scale scale为YES：原图会根据Size进行拉伸-会变形，scale为NO：原图会根据size进行填充-不会变形
  *
  *  @return 新生成的图片
  */
-+(UIImage *)getThumbImageWithImage:(UIImage *)image andSize:(CGSize)Size Scale:(BOOL)Scale{
++ (UIImage *)getThumbImageWithImage:(UIImage *)image andSize:(CGSize)size scale:(BOOL)scale {
     
-    UIGraphicsBeginImageContextWithOptions(Size, NO, image.scale);
-    CGRect rect = CGRectMake(0, 0, Size.width, Size.height);
+    UIGraphicsBeginImageContextWithOptions(size, NO, image.scale);
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
     
-    if (!Scale) {
-        CGFloat bili_imageWH = image.size.width/image.size.height;
-        CGFloat bili_SizeWH  = Size.width/Size.height;
+    if (!scale) {
+        CGFloat bili_imageWH = image.size.width / image.size.height;
+        CGFloat bili_SizeWH  = size.width / size.height;
         
         if (bili_imageWH > bili_SizeWH) {
-            CGFloat bili_SizeH_imageH = Size.height/image.size.height;
-            CGFloat height = image.size.height*bili_SizeH_imageH;
+            CGFloat bili_SizeH_imageH = size.height / image.size.height;
+            CGFloat height = image.size.height * bili_SizeH_imageH;
             CGFloat width = height * bili_imageWH;
-            CGFloat x = -(width - Size.width)/2;
+            CGFloat x = - (width - size.width)/2;
             CGFloat y = 0;
             rect = CGRectMake(x, y, width, height);
-        }else{
-            CGFloat bili_SizeW_imageW = Size.width/image.size.width;
+        } else {
+            CGFloat bili_SizeW_imageW = size.width / image.size.width;
             CGFloat width = image.size.width * bili_SizeW_imageW;
             CGFloat height = width / bili_imageWH;
             CGFloat x = 0;
-            CGFloat y = -(height - Size.height)/2;
+            CGFloat y = - (height - size.height) / 2;
             rect = CGRectMake(x, y, width, height);
         }
     }
@@ -303,57 +293,56 @@
  *  @param image     原图
  *  @param offset    横纵方向的偏移
  *  @param blurWidth 模糊程度
- *  @param Alpha     阴影透明度
- *  @param Color     阴影颜色
+ *  @param alpha     阴影透明度
+ *  @param color     阴影颜色
  *
  *  @return 新生成的图片
  */
-+(UIImage *)creatShadowImageWithOriginalImage:(UIImage *)image
-                              andShadowOffset:(CGSize)offset
-                                 andBlurWidth:(CGFloat)blurWidth
-                                     andAlpha:(CGFloat)Alpha
-                                     andColor:(UIColor *)Color
-{
-    CGFloat width  = (image.size.width+offset.width+blurWidth*4);
-    CGFloat height = (image.size.height+offset.height+blurWidth*4);
-    if(offset.width<0){
-        width  = (image.size.width-offset.width+blurWidth*4);
++ (UIImage *)creatShadowImageWithOriginalImage:(UIImage *)image
+                               andShadowOffset:(CGSize)offset
+                                  andBlurWidth:(CGFloat)blurWidth
+                                      andAlpha:(CGFloat)alpha
+                                      andColor:(UIColor *)color {
+    CGFloat width  = (image.size.width + offset.width + blurWidth * 4);
+    CGFloat height = (image.size.height + offset.height + blurWidth * 4);
+    if (offset.width < 0) {
+        width  = (image.size.width - offset.width + blurWidth * 4);
     }
-    if(offset.height<0){
-        height = (image.size.height-offset.height+blurWidth*4);
+    if (offset.height < 0) {
+        height = (image.size.height - offset.height + blurWidth * 4);
     }
     
-    UIView *RootBackView = [[UIView alloc]initWithFrame:CGRectMake(0,0,
+    UIView *rootBackView = [[UIView alloc]initWithFrame:CGRectMake(0,0,
                                                                    width,
                                                                    height)];
-    RootBackView.backgroundColor = [UIColor clearColor];
+    rootBackView.backgroundColor = [UIColor clearColor];
     
-    UIImageView *ImageView = [[UIImageView alloc]initWithFrame:CGRectMake(blurWidth*2,
-                                                                          blurWidth*2,
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(blurWidth * 2,
+                                                                          blurWidth * 2,
                                                                           image.size.width,
                                                                           image.size.height)];
-    if(offset.width<0){
-        ImageView.frame = CGRectMake(blurWidth*2-offset.width,
-                                     ImageView.frame.origin.y,
-                                     ImageView.frame.size.width,
-                                     ImageView.frame.size.height);
+    if (offset.width<0) {
+        imageView.frame = CGRectMake(blurWidth * 2 - offset.width,
+                                     imageView.frame.origin.y,
+                                     imageView.frame.size.width,
+                                     imageView.frame.size.height);
     }
-    if(offset.height<0){
-        ImageView.frame = CGRectMake(ImageView.frame.origin.x,
-                                     blurWidth*2-offset.height,
-                                     ImageView.frame.size.width,
-                                     ImageView.frame.size.height);
+    if (offset.height < 0) {
+        imageView.frame = CGRectMake(imageView.frame.origin.x,
+                                     blurWidth * 2 - offset.height,
+                                     imageView.frame.size.width,
+                                     imageView.frame.size.height);
     }
-    ImageView.backgroundColor = [UIColor clearColor];
-    ImageView.layer.shadowOffset = CGSizeMake(offset.width, offset.height);
-    ImageView.layer.shadowRadius = blurWidth;
-    ImageView.layer.shadowOpacity = Alpha;
-    ImageView.layer.shadowColor  = Color.CGColor;
-    ImageView.image = image;
+    imageView.backgroundColor = [UIColor clearColor];
+    imageView.layer.shadowOffset = CGSizeMake(offset.width, offset.height);
+    imageView.layer.shadowRadius = blurWidth;
+    imageView.layer.shadowOpacity = alpha;
+    imageView.layer.shadowColor  = color.CGColor;
+    imageView.image = image;
     
-    [RootBackView addSubview:ImageView];
+    [rootBackView addSubview:imageView];
     
-    UIImage *newImage = [self imageWithUIView:RootBackView];
+    UIImage *newImage = [self imageWithUIView:rootBackView];
     return newImage;
 }
 
@@ -363,18 +352,17 @@
  *  得到旋转后的图片
  *
  *  @param image 原图
- *  @param Angle 角度（0~360）
+ *  @param angle 角度（0~360）
  *
  *  @return 新生成的图片
  */
-+(UIImage  *)GetRotationImageWithImage:(UIImage *)image
-                                 Angle:(CGFloat)Angle
-{
++ (UIImage *)getRotationImageWithImage:(UIImage *)image
+                                 angle:(CGFloat)angle {
     
     UIView *RootBackView = [[UIView alloc] initWithFrame:CGRectMake(0,0,
                                                                     image.size.width,
                                                                     image.size.height)];
-    CGAffineTransform t = CGAffineTransformMakeRotation( Angle* M_PI / 180);
+    CGAffineTransform t = CGAffineTransformMakeRotation(angle* M_PI / 180);
     RootBackView.transform = t;
     CGSize rotatedSize = RootBackView.frame.size;
     
@@ -383,7 +371,7 @@
     CGContextRef theContext = UIGraphicsGetCurrentContext();
     
     CGContextTranslateCTM(theContext, rotatedSize.width/2, rotatedSize.height/2);
-    CGContextRotateCTM(theContext, Angle * M_PI / 180);
+    CGContextRotateCTM(theContext, angle * M_PI / 180);
     CGContextScaleCTM(theContext, 1.0, -1.0);
     
     CGContextDrawImage(theContext,
@@ -407,20 +395,19 @@
  注：若裁剪范围超出原图尺寸，则会用背景色填充缺失部位
  *
  *  @param image     原图
- *  @param Point     坐标
- *  @param Size      大小
+ *  @param point     坐标
+ *  @param size      大小
  *  @param backColor 背景色
  *
  *  @return 新生成的图片
  */
-+(UIImage *)cutImageWithImage:(UIImage *)image
-                      atPoint:(CGPoint)Point
-                     withSize:(CGSize)Size
-              backgroundColor:(UIColor *)backColor
-{
-    UIGraphicsBeginImageContextWithOptions(Size, NO, image.scale);
-    CGRect bounds = CGRectMake(0, 0, Size.width, Size.height);
-    CGRect rect   = CGRectMake(-Point.x, -Point.y,
++ (UIImage *)cutImageWithImage:(UIImage *)image
+                      atPoint:(CGPoint)point
+                     withSize:(CGSize)size
+              backgroundColor:(UIColor *)backColor {
+    UIGraphicsBeginImageContextWithOptions(size, NO, image.scale);
+    CGRect bounds = CGRectMake(0, 0, size.width, size.height);
+    CGRect rect   = CGRectMake(-point.x, -point.y,
                                image.size.width,
                                image.size.height);
     
@@ -443,8 +430,7 @@
  *
  *  @return 渲染出的图片
  */
-+(UIImage *)imageWithUIView:(UIView *)view
-{
++ (UIImage *)imageWithUIView:(UIView *)view {
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, [UIScreen mainScreen].scale);
     
     CGContextRef ctx = UIGraphicsGetCurrentContext();

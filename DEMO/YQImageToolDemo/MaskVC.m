@@ -14,13 +14,13 @@
 
 @implementation MaskVC
 
--(void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
     //先把分辨率调一遍
     UIImage *oldIMG = [YQImageTool getThumbImageWithImage:self.normalIMG
                                                   andSize:self.maskIMG.size
-                                                    Scale:NO];
+                                                    scale:NO];
     
     self.item1.IMGV.image = oldIMG;
     self.item1.titleStr.text = @"原图";

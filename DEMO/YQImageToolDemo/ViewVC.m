@@ -14,7 +14,7 @@
 
 @implementation ViewVC
 
--(void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
     UIView *view1 = [[UIView alloc]initWithFrame:CGRectMake(0, 0,

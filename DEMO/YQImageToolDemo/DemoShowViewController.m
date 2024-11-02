@@ -23,12 +23,12 @@
 @implementation DemoShowViewController
 
 #pragma mark --------LazyLoad
--(UIImage *)oldIMG{
+- (UIImage *)oldIMG{
     _oldIMG = (_oldIMG)?_oldIMG:[UIImage imageNamed:@"test.png"];
     return _oldIMG;
 }
 
--(UIImageView *)OldIMGV{
+- (UIImageView *)OldIMGV{
     if(!_OldIMGV){
         _OldIMGV = [[UIImageView alloc]initWithFrame:CGRectMake(0,
                                                                 64,
@@ -42,7 +42,7 @@
     return _OldIMGV;
 }
 
--(UIImageView *)NewIMGV{
+- (UIImageView *)NewIMGV{
     if(!_NewIMGV){
         _NewIMGV = [[UIImageView alloc]initWithFrame:CGRectMake(0,
                                                                 kViewMaxY(self.OldIMGV)+15,
@@ -55,7 +55,7 @@
     return _NewIMGV;
 }
 
--(CGSize)NewIMGSize{
+- (CGSize)NewIMGSize{
     return CGSizeMake(self.NewIMGV.frame.size.width*2,
                       self.NewIMGV.frame.size.height*2);
 }
@@ -69,19 +69,19 @@
     [self setup];
 }
 
--(void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
 }
 
--(void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
 }
 
--(void)viewWillDisappear:(BOOL)animated{
+- (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
 }
 
--(void)viewDidDisappear:(BOOL)animated{
+- (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
 }
 
@@ -93,7 +93,7 @@
 
 #pragma mark --------Functions
 //初始化
--(void)setup{
+- (void)setup{
     
     self.view.frame = [UIScreen mainScreen].bounds;
     self.view.backgroundColor  = [UIColor whiteColor];
@@ -107,7 +107,7 @@
 }
 
 //弹窗提示结果
--(void)alertResult:(NSString *)string{
+- (void)alertResult:(NSString *)string{
     UIAlertView *alertDialog;
     alertDialog = [[UIAlertView alloc]
                    initWithTitle:@"压缩结果"

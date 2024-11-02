@@ -14,21 +14,21 @@
 
 @implementation RotationVC
 
--(void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
    
     
     self.item1.IMGV.image = self.normalIMG;
     self.item1.titleStr.text = @"原图";
     
-    self.item2.IMGV.image = [YQImageTool GetRotationImageWithImage:self.normalIMG Angle:45];
+    self.item2.IMGV.image = [YQImageTool getRotationImageWithImage:self.normalIMG angle:45];
     self.item2.titleStr.text = @"旋转后的";
     
-    self.item3.IMGV.image = [YQImageTool GetRotationImageWithImage:self.normalIMG Angle:90];
+    self.item3.IMGV.image = [YQImageTool getRotationImageWithImage:self.normalIMG angle:90];
     self.item3.titleStr.text = @"旋转后的";
     
     
-    self.item4.IMGV.image = [YQImageTool GetRotationImageWithImage:self.normalIMG Angle:120];
+    self.item4.IMGV.image = [YQImageTool getRotationImageWithImage:self.normalIMG angle:120];
     self.item4.titleStr.text = @"旋转后的";
     
     

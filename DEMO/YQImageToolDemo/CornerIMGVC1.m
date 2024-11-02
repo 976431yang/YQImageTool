@@ -14,7 +14,7 @@
 
 @implementation CornerIMGVC1
 
--(void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
     

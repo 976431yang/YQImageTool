@@ -79,7 +79,7 @@ Podfile: pod 'YQImageTool'
 //waterRect：水印位置及大小，alpha：水印透明度，
 //waterScale：水印是否根据Rect改变长宽比
 
-+(UIImage *)GetWaterPrintedImageWithBackImage:(UIImage *)backImage
++(UIImage *)getWaterPrintedImageWithBackImage:(UIImage *)backImage
                                 andWaterImage:(UIImage *)waterImage
                                        inRect:(CGRect)waterRect
                                         alpha:(CGFloat)alpha
@@ -138,7 +138,7 @@ Podfile: pod 'YQImageTool'
 ```Objective-C
 //Angle:角度（0~360）
 
-+(UIImage  *)GetRotationImageWithImage:(UIImage *)image
++(UIImage  *)getRotationImageWithImage:(UIImage *)image
                                  Angle:(CGFloat)Angle;
         
 ```

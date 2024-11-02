@@ -18,17 +18,17 @@
 @implementation IMageToolDemoShowViewController
 
 #pragma mark --------LazyLoad
--(UIImage *)bigIMG{
+- (UIImage *)bigIMG {
     _bigIMG = (_bigIMG)?_bigIMG:[UIImage imageNamed:@"test.png"];
     return _bigIMG;
 }
 
--(UIImage *)normalIMG{
+- (UIImage *)normalIMG {
     _normalIMG = (_normalIMG)?_normalIMG:[UIImage imageNamed:@"test1.jpg"];
     return _normalIMG;
 }
 
--(UIImage *)maskIMG{
+- (UIImage *)maskIMG {
     _maskIMG = (_maskIMG)?_maskIMG:[UIImage imageNamed:@"mask.png"];
     return _maskIMG;
 }
@@ -42,17 +42,17 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
--(void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 }
 
--(void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     [self setup];
 }
 
--(void)viewWillDisappear:(BOOL)animated{
+- (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     //--------------------------------------------------判断是pop还是push
     //    NSArray *viewControllers = self.navigationController.viewControllers;
@@ -66,7 +66,7 @@
     //    }
 }
 
--(void)viewDidDisappear:(BOOL)animated{
+- (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     //    if (self.removeFlag == YES)
     //    {
@@ -84,7 +84,7 @@
     //    }
 }
 
--(void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
 }
@@ -94,7 +94,7 @@
 /**
  *  初始化
  */
--(void)setup{
+- (void)setup {
     
     
     

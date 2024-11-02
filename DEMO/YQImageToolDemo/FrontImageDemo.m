@@ -14,18 +14,18 @@
 
 @implementation FrontImageDemo
 
--(void)viewDidLoad{
+- (void)viewDidLoad{
     [super viewDidLoad];
     
     [self compressImage];
 }
 
--(void)compressImage{
+- (void)compressImage{
     self.title = @"正在压缩..";
     
-    UIImage *newIMG = [YQImageCompressTool CompressToImageWithImage:self.oldIMG
-                                                           ShowSize:self.NewIMGSize
-                                                           FileSize:200];
+    UIImage *newIMG = [YQImageCompressTool compressToImageWithImage:self.oldIMG
+                                                           showSize:self.NewIMGSize
+                                                           fileSize:200];
     
     NSData *newIMGData = UIImageJPEGRepresentation(newIMG,1);
     

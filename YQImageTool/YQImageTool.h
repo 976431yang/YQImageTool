@@ -32,14 +32,14 @@
 /**
  *  根据Size生成圆角图片，图片会拉伸-变形
  *
- *  @param Size            最终想要的图片的尺寸
+ *  @param size            最终想要的图片的尺寸
  *  @param image           原图
  *  @param width           圆角大小
  *  @param backgroundcolor 背景颜色
  *
  *  @return 新生成的图片
  */
-+ (UIImage *)getCornerImageFitSize:(CGSize)Size
++ (UIImage *)getCornerImageFitSize:(CGSize)size
                          WithImage:(UIImage *)image
                      andCornerWith:(CGFloat)width
                 andBackGroundColor:(UIColor *)backgroundcolor;
@@ -47,14 +47,14 @@
 /**
  *  根据Size生成圆角图片，图片会自适应填充，伸展范围以外的部分会被裁剪掉-不会变形
  *
- *  @param Size            最终想要的图片的尺寸
+ *  @param size            最终想要的图片的尺寸
  *  @param image           原图
  *  @param width           圆角大小
  *  @param backgroundcolor 背景颜色
  *
  *  @return 新生成的图片
  */
-+ (UIImage *)getCornerImageFillSize:(CGSize)Size
++ (UIImage *)getCornerImageFillSize:(CGSize)size
                           WithImage:(UIImage *)image
                       andCornerWith:(CGFloat)width
                  andBackGroundColor:(UIColor *)backgroundcolor;
@@ -65,14 +65,14 @@
  *  得到图片的缩略图
  *
  *  @param image 原图
- *  @param Size  想得到的缩略图尺寸
- *  @param Scale Scale为YES：原图会根据Size进行拉伸-会变形，Scale为NO：原图会根据Size进行填充-不会变形
+ *  @param size  想得到的缩略图尺寸
+ *  @param scale Scale为YES：原图会根据size进行拉伸-会变形，scale为NO：原图会根据size进行填充-不会变形
  *
  *  @return 新生成的图片
  */
 + (UIImage *)getThumbImageWithImage:(UIImage *)image
-                            andSize:(CGSize)Size
-                              Scale:(BOOL)Scale;
+                            andSize:(CGSize)size
+                              scale:(BOOL)scale;
 
 #pragma mark --------水印
 //--------------------------------------------------水印
@@ -87,7 +87,7 @@
  *
  *  @return 新生成的图片
  */
-+ (UIImage *)GetWaterPrintedImageWithBackImage:(UIImage *)backImage
++ (UIImage *)getWaterPrintedImageWithBackImage:(UIImage *)backImage
                                  andWaterImage:(UIImage *)waterImage
                                         inRect:(CGRect)waterRect
                                          alpha:(CGFloat)alpha
@@ -100,15 +100,15 @@
  注：若裁剪范围超出原图尺寸，则会用背景色填充缺失部位
  *
  *  @param image     原图
- *  @param Point     坐标
- *  @param Size      大小
+ *  @param point     坐标
+ *  @param size      大小
  *  @param backColor 背景色
  *
  *  @return 新生成的图片
  */
 + (UIImage *)cutImageWithImage:(UIImage *)image
-                       atPoint:(CGPoint)Point
-                      withSize:(CGSize)Size
+                       atPoint:(CGPoint)point
+                      withSize:(CGSize)size
                backgroundColor:(UIColor *)backColor;
 
 #pragma mark --------根据遮罩图形状裁剪
@@ -118,13 +118,13 @@
  原图与遮罩图片宽高最好都是1：1。若比例不同，则会居中。
  若因比例问题达不到效果，可用下面的UIview转UIImage的方法，先制作1：1的UIview，然后转成UIImage使用此功能
  *
- *  @param MaskImage 遮罩图片：遮罩图片最好是要显示的区域为纯黑色，不显示的区域为透明色。
- *  @param Backimage 准备裁剪的图片
+ *  @param maskImage 遮罩图片：遮罩图片最好是要显示的区域为纯黑色，不显示的区域为透明色。
+ *  @param backimage 准备裁剪的图片
  *
  *  @return 新生成的图片
  */
-+ (UIImage *)creatImageWithMaskImage:(UIImage *)MaskImage
-                        andBackimage:(UIImage *)Backimage;
++ (UIImage *)creatImageWithMaskImage:(UIImage *)maskImage
+                        andBackimage:(UIImage *)backimage;
 
 #pragma mark --------生成阴影
 //--------------------------------------------------生成阴影
@@ -134,16 +134,16 @@
  *  @param image     原图
  *  @param offset    横纵方向的偏移
  *  @param blurWidth 模糊程度
- *  @param Alpha     阴影透明度
- *  @param Color     阴影颜色
+ *  @param alpha     阴影透明度
+ *  @param color     阴影颜色
  *
  *  @return 新生成的图片
  */
 + (UIImage *)creatShadowImageWithOriginalImage:(UIImage *)image
                                andShadowOffset:(CGSize)offset
                                   andBlurWidth:(CGFloat)blurWidth
-                                      andAlpha:(CGFloat)Alpha
-                                      andColor:(UIColor *)Color;
+                                      andAlpha:(CGFloat)alpha
+                                      andColor:(UIColor *)color;
 
 #pragma mark --------旋转
 //--------------------------------------------------旋转
@@ -151,12 +151,12 @@
  *  得到旋转后的图片
  *
  *  @param image 原图
- *  @param Angle 角度（0~360）
+ *  @param angle 角度（0~360）
  *
  *  @return 新生成的图片
  */
-+ (UIImage  *)GetRotationImageWithImage:(UIImage *)image
-                                  Angle:(CGFloat)Angle;
++ (UIImage *)getRotationImageWithImage:(UIImage *)image
+                                 angle:(CGFloat)angle;
 
 #pragma mark --------UIView转图片，提前渲染
 //--------------------------------------------------UIView转图片，提前渲染

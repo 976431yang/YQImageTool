@@ -14,24 +14,24 @@
 
 @implementation OnlyCompressDataDemo
 
--(void)viewDidLoad{
+- (void)viewDidLoad{
     [super viewDidLoad];
     
     [self compressImage];
 }
 
--(void)compressImage{
+- (void)compressImage{
     self.title = @"正在压缩..";
     
-    NSData *newIMGData = [YQImageCompressTool OnlyCompressToDataWithImage:self.oldIMG FileSize:200];
+    NSData *newIMGData = [YQImageCompressTool onlyCompressToDataWithImage:self.oldIMG fileSize:200];
     UIImage *newIMG = [UIImage imageWithData:newIMGData];
     
-    NSData *ReNewIMGData = UIImageJPEGRepresentation(newIMG,1);
+    NSData *reNewIMGData = UIImageJPEGRepresentation(newIMG,1);
     
     self.NewIMGV.image = newIMG;
     self.title = self.titleStr;
     
-    [self alertResult:[NSString stringWithFormat:@"压缩得到的NSData大小：%lu kb\n\n使用Data再次创建的UIImage的大小： %lu kb",[newIMGData length]/1024,[ReNewIMGData length]/1024]];
+    [self alertResult:[NSString stringWithFormat:@"压缩得到的NSData大小：%lu kb\n\n使用Data再次创建的UIImage的大小： %lu kb",[newIMGData length]/1024,[reNewIMGData length]/1024]];
 }
 
 

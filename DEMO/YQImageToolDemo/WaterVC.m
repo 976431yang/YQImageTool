@@ -14,7 +14,7 @@
 
 @implementation WaterVC
 
--(void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
     
@@ -24,7 +24,7 @@
     self.item2.IMGV.image = self.bigIMG;
     self.item2.titleStr.text = @"水印图";
     
-    self.item3.IMGV.image = [YQImageTool GetWaterPrintedImageWithBackImage:self.normalIMG
+    self.item3.IMGV.image = [YQImageTool getWaterPrintedImageWithBackImage:self.normalIMG
                                                              andWaterImage:self.bigIMG
                                                                     inRect:CGRectMake(50,
                                                                                       50,
@@ -35,7 +35,7 @@
     self.item3.titleStr.text = @"参数waterScale为YES";
     
     
-    self.item4.IMGV.image = [YQImageTool GetWaterPrintedImageWithBackImage:self.normalIMG
+    self.item4.IMGV.image = [YQImageTool getWaterPrintedImageWithBackImage:self.normalIMG
                                                              andWaterImage:self.bigIMG
                                                                     inRect:CGRectMake(50,
                                                                                       50,

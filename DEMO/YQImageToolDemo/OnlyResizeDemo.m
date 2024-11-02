@@ -14,18 +14,18 @@
 
 @implementation OnlyResizeDemo
 
--(void)viewDidLoad{
+- (void)viewDidLoad{
     [super viewDidLoad];
     
     [self compressImage];
 }
 
--(void)compressImage{
+- (void)compressImage{
     self.title = @"正在压缩..";
     
-    UIImage *newIMG = [YQImageCompressTool ResizeImageWithImage:self.oldIMG
+    UIImage *newIMG = [YQImageCompressTool resizeImageWithImage:self.oldIMG
                                                         andSize:self.NewIMGSize
-                                                          Scale:NO];
+                                                          scale:NO];
     
     NSData *newIMGData = UIImageJPEGRepresentation(newIMG,1);
     

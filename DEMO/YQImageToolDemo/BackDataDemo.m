@@ -14,18 +14,18 @@
 
 @implementation BackDataDemo
 
--(void)viewDidLoad{
+- (void)viewDidLoad{
     [super viewDidLoad];
     
     [self compressImage];
 }
 
--(void)compressImage{
+- (void)compressImage{
     self.title = @"正在压缩..";
     
-    [YQImageCompressTool CompressToDataAtBackgroundWithImage:self.oldIMG
-                                                    ShowSize:self.NewIMGSize
-                                                    FileSize:200
+    [YQImageCompressTool compressToDataAtBackgroundWithImage:self.oldIMG
+                                                    showSize:self.NewIMGSize
+                                                    fileSize:200
                                                        block:^(NSData *resultData)
     {
         UIImage *newIMG = [UIImage imageWithData:resultData];
